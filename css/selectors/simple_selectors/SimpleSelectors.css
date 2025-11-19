@@ -1,0 +1,72 @@
+/* simple selectors */
+/* Universal selector (*)*/
+/* *{
+  font-size: 30px;
+} */
+
+/* element selector(tagname) */
+/* h1{
+    font-size: 45px;
+    color: red;
+}
+
+button{
+    font-size: 50px;
+    font-weight: bold;
+    color: darkblue;
+    background-color: lightgrey;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+} */
+
+/* id selector(#) */
+h1{
+    font-size: 50px;
+
+}
+#core_java_heading{
+    color: red;
+}
+
+#core_python_heading{
+    color: darkblue;
+}
+
+#web_development_heading{
+    color: greenyellow;
+    width: fit-content;
+    background-color: gray;
+}
+button{
+        outline: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+#subscribe_button{
+    background-color: red;
+    border-radius: 30px
+}
+
+#follow_botton{
+   background-color: royalblue;
+   border-radius: 10px;    
+}
+
+/* class selectors */
+.increase_font_size{
+    font-size: 45px;
+}
+
+.text_darkblue{
+    color: darkblue;
+}
+.color_changes{
+    color: white;
+    background-color: red;
+}
+#scrollable_content_marquee{
+    font-weight: bold;
+
+}
