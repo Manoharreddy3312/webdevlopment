@@ -39,14 +39,14 @@ h1{
     background-color: gray;
 }
 button{
-        outline: none;
+    outline: none;
     border: none;
     color: white;
     font-weight: bold;
 }
 #subscribe_button{
     background-color: red;
-    border-radius: 30px
+    border-radius: 30px;
 }
 
 #follow_botton{
