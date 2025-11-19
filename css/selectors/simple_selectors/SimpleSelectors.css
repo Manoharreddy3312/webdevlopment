@@ -1,8 +1,8 @@
 /* simple selectors */
 /* Universal selector (*)*/
-/* *{
+*{
   font-size: 30px;
-} */
+}
 
 /* element selector(tagname) */
 /* h1{
