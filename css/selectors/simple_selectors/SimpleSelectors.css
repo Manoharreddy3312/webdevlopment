@@ -74,8 +74,6 @@ button{
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
 
 
-
-
 #batch_schedule_table_caption{
     color: white;
     font-size: 75px;
@@ -98,7 +96,6 @@ button{
     font-family: Underdog;
 
 }
-
 
 .batch_schedule_table_body_cells{
     font-size: 30px;
