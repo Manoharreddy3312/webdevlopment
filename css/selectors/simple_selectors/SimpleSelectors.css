@@ -1,8 +1,8 @@
 /* simple selectors */
 /* Universal selector (*)*/
-*{
+/* *{
   font-size: 30px;
-}
+} */
 
 /* element selector(tagname) */
 /* h1{
@@ -21,7 +21,7 @@ button{
 } */
 
 /* id selector(#) */
-h1{
+/* h1{
     font-size: 50px;
 
 }
@@ -55,7 +55,7 @@ button{
 }
 
 /* class selectors */
-.increase_font_size{
+/* .increase_font_size{
     font-size: 45px;
 }
 
@@ -69,4 +69,53 @@ button{
 #scrollable_content_marquee{
     font-weight: bold;
 
+} */ 
+@import url('https://fonts.googleapis.com/css2?family=Underdog&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+
+
+
+#batch_schedule_table_caption{
+    color: white;
+    font-size: 75px;
+    background-color: purple;
+    font-weight: bold;
+    font-family: StindleSerifDemo;
 }
+@font-face {
+    font-family: StindleSerifDemo;
+    src: url(../../../assets/fonts/StindleSerifDemo.ttf);
+}
+
+#batch_schedule_table_head{
+    color:orange;
+    background-color: black;
+}
+
+.batch_schedule_table_head_cells{
+    font-size: 50px;
+    font-family: Underdog;
+
+}
+
+
+.batch_schedule_table_body_cells{
+    font-size: 40px;
+    font-family:Merienda;
+}
+/* GroupSelector */
+#batch_schedule_table_body_first_row,
+#batch_schedule_table_body_third_row{
+   
+    background-color: lightgray;
+}
+
+.lightgray_rows{
+    background-color: lightgray;
+}
+
+.lavender_blush_rows{
+    background-color:lavenderblush;
+}
+
