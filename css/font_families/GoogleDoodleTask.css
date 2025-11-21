@@ -1,6 +1,6 @@
 #google_doodle_continer{
-    width:500px ;
-    height: 500px;
+    width:fit-content;
+    
     
 }
 .google_doodle{
@@ -8,7 +8,7 @@
     font-size: 80px;
     font-weight: bold;
     font-family: Product Sans Regular;
-    margin-left: 25px;
+    
     
 }
 @font-face {
