@@ -13,9 +13,9 @@ background-image:
     url("../../../assets/images/stars.png");
 
 background-position:
-    10% 95%,  
-    95% 10%,    
-    50% 50%;    
+    10% 95%, /* earth*/
+    95% 10%,  /* sun*/  
+    50% 50%;  /* stars*/  
 
 background-repeat:
     no-repeat,
