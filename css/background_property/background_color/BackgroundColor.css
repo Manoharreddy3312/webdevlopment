@@ -1,0 +1,51 @@
+#color_block {
+    width: 100px;
+    height: 100px;
+
+    /* color name */
+    background-color: red;
+    background-color: teal;
+    background-color: lightpink;
+    background-color: yellow;
+
+    /* rgb color value */
+    background-color: rgb(255, 0, 0);
+    background-color: rgb(0, 255, 0);
+    background-color: rgb(0, 0, 255);
+    background-color: rgb(255, 255, 0);
+    background-color: rgb(0, 255, 255);
+    background-color: rgb(255, 0, 255);
+    background-color: rgb(233, 208, 211);
+
+    /* rgb color value with alpha value */
+    background-color: rgba(0, 0, 255, 0.100);
+
+    /* hexadecimal color value */
+    background-color: #ff0000;
+    background-color: #00ff00;
+    background-color: #0000ff;
+
+    /* hexadecimal color value with alpha value */
+    background-color: #0000ff10;
+    background-color: #0f03;
+
+    /* hsl color value */
+    background-color: hsl(360deg, 100%, 95%);
+    background-color: hsl(30deg, 100%, 95%);
+
+    /* hsl color value with alpha value */
+    background-color: hsl(30deg, 100%, 50%, 0.15);
+
+    /* transparent (default value) */
+}
+
+#black_color_block {
+    width: 100px;
+    height: 100px;
+
+    /* six digit hexadecimal color value */
+    background-color: #000000;
+
+    /* three digit hexadecimal color value */
+    background-color: #000;
+}

@@ -1,0 +1,33 @@
+/* Common text style */
+@font-face {
+    font-family: Product Sans Regular;
+    src: url(/assets/fonts/Product\ Sans\ Regular.ttf);
+}
+
+.background_clip {
+    font-size: 120px;
+    font-weight: 700;
+    text-align: center;
+    background-clip: text;
+    color: transparent;
+    font-family: Product Sans Regular;
+    
+}
+
+#instagram {
+    background-image: linear-gradient(90deg,
+    Blue,
+    Purple,
+    violet,
+    Red,
+    orange,
+    yellow
+
+    );
+}
+
+#earth {
+    background-image: url("../../../assets/images/Earth.png");
+    background-size: 40%;
+    background-position: center;
+}
