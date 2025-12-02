@@ -1,34 +1,40 @@
- #flower{
+#flower_task{
     width: 400px;
-    height: 400px;
-    border: none;
-    
+    height:400px;   
+
 }
-.flower_blocks{
-    width: 50%; 
+.flowercontainers{
+    width: 50%;
     height: 50%;
-    float: left;
-
-    
-}
-.flower_red_block{
-background-color: yellow;
-border-radius: 0px 80.5% 0px 80.5%;
-
-}
-.flower_darkblue_block{
-    background-color: darkblue;
-    float: left;
-    border-radius: 80.5% 0% 80.5% 0%;
-}
-.flower_orange_block{
     background-color: orange;
-    border-radius: 80.5% 0% 80.5% 0%;
+    float: left;
 }
-.flower_green_block{
-    background-color: green;
-    border-radius: 0px 80.5% 0px 80.5%;
-} 
-.flower_border{
-    border: 3px solid black;
+#first_petal{
+    background-color: red;
+    border-bottom-right-radius: 0%;
 }
+#second_petal{
+    border-bottom-left-radius: 0%;
+    background-color: blue;
+}
+    
+    #third_petal{
+        background-color: green;
+        border-top-right-radius: 0%;
+
+    }
+    #fouth_petal{
+        background-color: orange;
+        border-top-left-radius: 0%;
+
+}
+#first_petal,#fouth_petal{
+     border-top-right-radius: 50%;
+     border-bottom-left-radius: 50%;
+}
+#second_petal,#third_petal  {
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+}
+
+
