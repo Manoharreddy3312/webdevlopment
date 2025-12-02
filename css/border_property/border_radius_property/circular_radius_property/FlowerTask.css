@@ -19,12 +19,12 @@
 }
     
     #third_petal{
-        background-color: green;
+        background-color: orange;
         border-top-right-radius: 0%;
 
     }
     #fouth_petal{
-        background-color: orange;
+        background-color: green;
         border-top-left-radius: 0%;
 
 }
