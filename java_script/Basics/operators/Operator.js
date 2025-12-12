@@ -1,0 +1,6 @@
+console.log(20+30)
+console.log(20-30)
+console.log(20**30)
+console.log(20/3)
+console.log(20%3)
+console.log(2**5)

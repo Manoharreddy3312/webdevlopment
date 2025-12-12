@@ -1,0 +1,29 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: ProductSans;
+    src: url(../../assets/fonts/ProductSansBold.ttf);
+}
+
+#glowing_button {
+    margin: 200px 300px 150px 350px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    font-family: ProductSans;
+    font-size: 80px;
+    border-radius: 25px;
+    background-color: greenyellow;
+    cursor: pointer;
+    /* 1. Define an initial, transparent inset shadow */
+    box-shadow: inset 0 0 0 orange; 
+    transition: box-shadow 500ms linear; /* 2. Shorten the transition duration for a noticeable effect */
+}
+#glowing_button:hover {
+  /* 3. Transition to the desired opaque inset shadow */
+  box-shadow: inset 10px 10px 25px orange; 
+   box-shadow: outset 10px 10px 25px orange; 
+}

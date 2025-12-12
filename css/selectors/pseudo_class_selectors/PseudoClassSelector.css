@@ -1,0 +1,232 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: ProductSansRegular;
+}
+
+body{
+    padding: 10px;
+    
+    
+}
+
+@font-face {
+    font-family:ProductSansRegular;
+    src: url(../../../assets/fonts/ProductSansRegular.ttf);
+
+}
+.speakers_brand_hyperlinks{
+    font-size: 33px;
+    font-weight: bold;
+    padding: 5px 20px;
+    margin-right: 20px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.speakers_brand_hyperlinks:link{
+    color: orange;
+}
+
+.speakers_brand_hyperlinks:visited{
+    color: red;
+}
+
+.speakers_brand_hyperlinks:active{
+    color: greenyellow;
+}
+
+.speakers_brand_hyperlinks:hover{
+    color: white;
+    background-color: black;
+}
+
+
+#color_blocks_container{
+    width: 100%;
+    height: 150px;
+    background-color:rgb(65, 60, 60);
+    margin-top: 20px;
+    padding: 25px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+.color_blocks{
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    margin-right: 20px;
+    float: left;
+    border-radius: 20px;
+
+}
+
+#color_blocks_container:hover>.color_blocks:first-child,
+#color_blocks_container:hover>.color_blocks:last-child{
+    background-color: orange;
+}
+
+
+#color_blocks_container:hover>.color_blocks:nth-child(3),
+#color_blocks_container:hover>.color_blocks:nth-last-child(3)
+{
+    background-color: purple;
+}
+
+/* #color_blocks_container:hover>.color_blocks:nth-child(5),
+#color_blocks_container:hover>.color_blocks:nth-last-child(5){
+    background-color: red;
+}
+
+#color_blocks_container:hover>.color_blocks:nth-child(2),
+#color_blocks_container:hover>.color_blocks:nth-last-child(2){
+    background-color:green;
+}
+#color_blocks_container:hover>.color_blocks:nth-child(4),
+#color_blocks_container:hover>.color_blocks:nth-last-child(4){
+    background-color:brown;
+} */
+
+#demo_for_container{
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(183, 162, 183);
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.input_boxes{
+    font-size: 26px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    margin-right: 10px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+.input_boxes:required{
+    background-color: white;
+}
+
+.input_boxes:read-only{
+    background-color: rgb(255, 0, 0);
+    color:white;
+}
+
+.input_boxes:focus{
+    color: white;
+    background-color: black;
+}
+.input_buttons{
+    outline: none;
+    border: none;
+    padding: 5px 20px;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.input_buttons:disabled{
+    color:white;
+    background-color: red;
+}
+
+/* spacewalk scrll bar */
+/* body::-webkit-scrollbar{
+    width: 30px;
+    background-color: black;
+    background-size: 75%;
+}
+    body::-webkit-scrollbar-thumb{
+        background-image: url(../../../assets/images/Space.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    body::-webkit-scrollbar-button{
+        height: 30px;
+        background-image: url(../../../assets/images/Earth.png);
+        background-size: 100%;
+        cursor: pointer;
+    }
+      body::-webkit-scrollbar-button:active{
+        background-image: url(../../../assets/images/Sun.png);
+      } */
+ body::-webkit-scrollbar{
+    width: 15px;
+    background-color: lightgray;
+ }
+ body::-webkit-scrollbar-thumb{
+    background-color: gray;
+    cursor: pointer;
+    border-radius: 50px;
+ }
+ body::-webkit-scrollbar-button:active{
+    background-color: black;
+ }
+  body::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(63, 62, 62);
+  }
+   body::-webkit-scrollbar-button{
+    height: 15px;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+   }
+
+
+#slider_input {
+    width: 20%;
+    -webkit-appearance: none;
+}
+
+#slider_input::-webkit-slider-runnable-track {
+    height: 50px;
+    background-color: darkblue;
+    border-radius: 50px;
+    -webkit-appearance: none;
+}
+
+#slider_input::-webkit-slider-thumb {
+    height: 100%;
+    width: 50px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-appearance: none;
+
+}
+
+#slider_input::-webkit-slider-thumb:hover {
+    background-color: red;
+}
+
+#file_input {
+    color: red;
+    margin-top: 10px;
+    font-size: 30px;
+
+}
+
+#file_input::-webkit-file-upload-button {
+    color: white;
+    background-color: black;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#file_input::-webkit-file-upload-button:active {
+    background-color: orange;
+}
+
+
+

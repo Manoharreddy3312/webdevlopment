@@ -1,0 +1,107 @@
+/*
+pseudo-element selector
+selector::pseudo-elements{
+    property: value;
+    property: value;
+}
+*/
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: ProductSans;
+}
+@font-face{
+    font-family: ProductSans;
+    src: url(../../../assets/fonts/ProductSansRegular.ttf);
+}
+body{
+    padding: 20px;
+}
+.input_boxes{
+    color: darkblue;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 15px;
+}
+.input_boxes::placeholder{
+    color: darkblue;
+}
+.headings{
+    font-size: 65px;
+    cursor: pointer;
+}
+#core_java_heading:hover::before{
+    content: "Core ";
+    color: red;
+}
+#web_development_heading:hover::after{
+    content: " Development";
+    color: orange;
+}
+#web_development_paragraph{
+    font-size: 30px;
+}
+#web_development_paragraph::first-letter{
+    font-size: 50px;
+    font-weight: bold;
+    color: darkblue;
+}
+#web_development_paragraph::first-line{
+    color: darkblue;
+}
+#web_development_paragraph::selection{
+    color: greenyellow;
+    background-color: gray;
+}
+.training_domain_list_items{
+    font-size: 50px;
+    font-weight: bold;
+}
+.training_domain_list_items::marker{
+    color: red;
+}
+.jspiders_list_items,
+.qspiders_list_items,
+.pyspiders_list_items,
+.snacks_list_items{
+    font-size: 25px;
+    font-weight: normal;
+}
+.jspiders_list_items::marker,
+.qspiders_list_items::marker,
+.pyspiders_list_items::marker{
+    color: darkblue;
+}
+#test_yantra_training_domains_heading,
+#snacks_heading{
+    font-size: 65px;
+    margin-top: 20px;
+}
+#training_domain_list,
+#snacks_list{
+    margin-left: 50px;
+}
+#snacks_list{
+    list-style-type: none;
+}
+#popcorn_list_item::marker{
+    content: "🍔";
+}
+#french_fries_list_item::marker{
+    content: "🍟";
+}
+#burger_list_item::marker{
+    content: "🍔";
+}
+#sand_wich_list_item::marker{
+    content: "🥪";
+}
+#beer_list_item::marker{
+    content: "🍺";
+}
