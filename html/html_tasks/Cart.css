@@ -29,6 +29,7 @@
     font-size: 30px;
     color: gold;
     margin-left: 40px;
+
 }
 
 .cart_container_heading {
@@ -44,7 +45,7 @@
     font-size: 20px;
     margin-left: 40px;
     margin-bottom: 10px;
-
+    
 }
 
 
@@ -61,9 +62,10 @@
 }
 
 .rating span {
+    background-color: white;
     width: 45px;
     height: 45px;
-    color: #cbd5e1;
+    color:black;
     border-radius: 50%;
     display: flex;
     justify-content: center;
