@@ -1,4 +1,4 @@
-//! NAMED FUNCTION
+//!--- NAMED FUNCTION (fuction with a name)
 
 // function add(){
 //     console.log("im a function");
@@ -7,27 +7,36 @@
 
 // add();
 
-// ! ANONYMOUS FUNCTION
+//!---- ANONYMOUS FUNCTION (fuction without a name)
 
 // function (){
 //     console.log("anonymous funcrtion");
     
 // }
+ 
+//!---- FUNCTION WITH EXPRESSION
 
-// ! FUNCTION WITH EXPRESSION
+// let a = function(a,b){
+//     console.log(a+b);
+    
+// }
+// a(10,20);
 
-// let a = function(){
-//     console.log("FUNCTION WITH EXPRESSION");
+// let a = function demo(){
+//     console.log("FUNCTION WITH EXPRESSION-2");
     
 // }
 // a();
 
-let a = function demo(){
-    console.log("FUNCTION WITH EXPRESSION-2");
-    
+// ! PARAMETER FUNCTION
+
+function demo(a,b){
+    // let c = a+b;
+    console.log(a+b);
+    console.log(a-b)
+    console.log(a*b)
+    console.log(a/b)
+    console.log(a%b)
 }
-a();
-
-
-
+demo(10,50);
 
