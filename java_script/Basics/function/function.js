@@ -81,7 +81,7 @@
 // }
 // console.log(info(2,3));
 
-// using arrow function find factorial of a number
+//! using arrow function find factorial of a number
 
 // let fact = (num)=>{
 //     let f = 1;
@@ -159,7 +159,7 @@
 // console.log("pen", pid.next().value);
 
 
-// write a generator function to generate the first 5-natural numbers
+//! write a generator function to generate the first 5-natural numbers
 // function * naturalNumbers(n){
 //     for(let i=1;i<=n;i++){
 //         yield i;
@@ -174,7 +174,7 @@
 
 
 
-// wap program on generator function .
+//! wap program on generator function .
 // function * gen(){
 //     let i = 0;
 //     while(true){
@@ -197,9 +197,9 @@
 // function info(){
 //     console.log("recurssive function");
 //     info()
-    
+
 // }
-// for above progrmam we want to print only 10 times
+//! for above progrmam we want to print only 10 times
 // let count = 0;
 // function info(){
 //     if(count<=10){
@@ -211,18 +211,45 @@
 // info()
 
 
+//! using recurssive function find the factorial of a number
+// function fact(n) {
+//     if (n == 0) {
+//         return 1;
+//     } else {
+//         return n * fact(n - 1);
+//     }
+// }
+// console.log(fact(6));
+
+//! HIGHER ORDER FUNCTION & CALLBACK FUNCTION
+
+// function add(a, b, c) {
+//     let d = a + b;
+//     return c(d);
+// }
+// function result(z) {
+//     console.log(z);
+// }
+// add(2, 4, result)
+
+// ! FIRST ORDER FUNCTION
+// function area(s) {
+//     return s * s;
+// }
+// function parameter(p) {
+//     return 4 * b;
+// }
+// function square(a, b) {
+//     return b(a);
+// }
+// console.log(4, area);
+// console.log(3, parameter);
 
 
-// using recurssive function find the factorial of a number
-function fact(n){
-    if(n==0){
-        return 1;
-    }else{
-        return n*fact(n-1);
-    }
+function greet(name){
+    return "Hello "+name;
 }
-console.log(fact(5));
-
+console.log(greet("Manohar"));
 
 
 
