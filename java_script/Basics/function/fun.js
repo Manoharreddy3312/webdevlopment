@@ -78,47 +78,7 @@
 // 8. first order function
 // 9. nested Function
 // 10.Anonymus Function
-
-//===================================================================================
-//! 1. fuction declaration (named)
-// 
-
-// function add(a,b){
-    //     return a+b;
-    // }
-    // console.log(add(10,20));
-    
-//===================================================================================
-    //! 2. Function Expression
-    
-    // let add = function(a,b){
-        //     return a+b;
-        // }
-        
-        // console.log(add(10,20));
-        
-//===================================================================================
-        
-//! 3. Arrow Function
-        
-        // let add = (a,b)=>{
-        //     return a+b;
-        // }
-        // console.log(add(10,20));
-
-// let add = (a,b) =>a+b;
-// console.log(add(10,20));
-
-
-
-//===================================================================================
-// 4. immediate invoked Function expression - IIFE
-// (function(){
-    //     console.log("i run when called");
-    
-    // }
-    // )();
-    
+ 
 //===================================================================================
 // !1. Named Function
 
