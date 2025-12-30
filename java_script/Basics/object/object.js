@@ -281,13 +281,15 @@ console.log(c3);
 // let a = Math.sqrt(4)
 // let a = Math.cbrt(27)
 // let a = Math.pow(5,2)
-let a = Math.pow(5,2)
-console.log(a);
+// let a = Math.pow(5,2)
+// console.log(a);
 
 
 
-
-
+// git add .
+// git commit -m "commit"
+// git push --set-upstream origin main
+// git push
 
 
 

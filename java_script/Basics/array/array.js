@@ -261,10 +261,10 @@
 // let arr1 = arr.reduce((acc,cv)=>acc+cv,iv)
 // console.log(arr1);
 
-let iv  = 1;
-let arr = [1,2,3,4,5]
-let arr1 = arr.reduce((acc,cv)=>acc*cv,iv)
-console.log(arr1);
+// let iv  = 1;
+// let arr = [1,2,3,4,5]
+// let arr1 = arr.reduce((acc,cv)=>acc*cv,iv)
+// console.log(arr1);
 
 
 // ! 24.reduceRight(): it will reduce the array to a single value based on the condition from right side
