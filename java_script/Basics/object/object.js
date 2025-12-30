@@ -219,13 +219,22 @@ let user = [{
 //     }
 
 
-let a= user.find((v)=>{
-    return v.active==true
-})
+// let a= user.find((v)=>{
+//     return v.active==true
+// })
 
-console.log(a);
+// console.log(a);
 
 
+
+
+//! let arr = [2,5,3]. find the product of all numbers using array method
+
+// let arr = [2,5,3]
+// let product = arr.reduce((acc,cv)=>{
+//     return acc * cv
+// },1)
+// console.log(product);
 
 
 
