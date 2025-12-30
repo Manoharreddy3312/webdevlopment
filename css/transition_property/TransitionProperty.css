@@ -1,0 +1,31 @@
+*{
+    margin: 0px;
+    padding: 0%;
+    box-sizing:border-box;
+}
+
+body{
+    padding: 20px;
+}
+
+#color_block{
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    border: 30px solid black;
+    cursor: pointer;
+    border-radius: 25px;
+
+    /* TRANSITION SPECIFIC PRAPORTIES */
+    transition-property: width,height,border,border-radius;
+    transition-duration: 10000ms,10000ms,5000ms,10000ms;
+    transition: all;
+}
+
+#color_block:hover{
+    width: 500px;
+    height: 500px;
+    border: 60px solid gray;
+    border-radius: 50px;
+}
+

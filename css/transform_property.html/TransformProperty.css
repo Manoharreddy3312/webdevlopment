@@ -1,0 +1,109 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+   
+
+}
+
+
+#color_block_containers{
+    width: 600px;
+    height: 150px;
+    background-color: gray;
+    margin: 250px auto;
+    border-radius: 15px;
+    padding-bottom: 5px;
+    cursor: pointer;
+
+}
+
+.color_blocks{
+    width:200px;
+    height: 100%;
+    float: left;
+    cursor: pointer;
+    border-bottom: 5px solid black;
+
+}
+
+#red_color{
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-image: url(../../assets/images/jyupiter.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    
+}
+
+#darkblue_color{
+   
+    background-color:darkblue;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#orange_color{
+    background-color:orange;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* rotate function */
+#color_block_containers:hover>.color_blocks{
+    transition: all 5000ms ease-in-out;
+}
+
+#color_block_containers:hover>#red_color{
+    transform: rotateX(90deg);
+
+}
+
+#color_block_containers:hover>#darkblue_color{
+    transform: rotateY(1800deg);
+}
+#color_block_containers:hover>#orange_color{
+    transform: rotateZ(360deg);
+}
+
+
+/* skew fuction */
+
+#color_block_containers:hover>#red_color{
+    transform: skewX(90deg);
+}
+#color_block_containers:hover>#darkblue_color{
+    transform: skewY(180deg);
+}
+#color_block_containers:hover>#orange_color{
+    transform: skew(90deg,180deg);
+}
+
+#color_blocks_containers:hover>.color_blocks2{
+    transition: all 5000ms ease-in-out;
+}
+/* scale function */ 
+ #color_blocks_containers:hover>#red_color{
+    transform: scale(1.5);
+}
+#color_blocks_containers:hover>#darkblue_color{
+    transform: scaleY(1.5);
+}
+#color_blocks_containers:hover>#orange_color{
+    transform: scale(1.5,2.5)
+
+}
+
+#color_blocks_containers:hover>#lightseagreen_color{
+    transform: translateX(-100px);
+}
+#color_blocks_containers:hover>#darkpink_color{
+    transform: translateY(-100px);
+}
+#color_blocks_containers:hover>#darkbrown_color{
+    transform: translate(100px);
+}

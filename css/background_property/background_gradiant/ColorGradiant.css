@@ -1,0 +1,16 @@
+.color_blocks{
+width: 100px;
+height: 100px;
+float: left;
+}
+
+#linear_color_blocks{
+    background-image:linear-gradient(orange,white,green);
+}
+#radiant_color_blocks{
+    background-image: radial-gradient(at bottom left, violet,indigo,blue,green,orange,red);
+
+}
+#conical_color_blocks{
+  background-image: conic-gradient(violet,indigo,blue,green,orange,red);
+}

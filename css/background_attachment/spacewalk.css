@@ -1,0 +1,93 @@
+body {
+    background-image:
+        url(../../assets/images/Earth.png),
+        url(../../assets/images/Moon.png),
+        url(../../assets/images/Satellite.png),
+        url(../../assets/images/sun.png),
+        url(../../assets/images/stars.png);
+
+    width: 100%;
+    height: 5000px;
+    box-sizing: border-box;
+
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+
+    background-position:
+        bottom left,
+        /* Earth */
+        370px 95%,
+        /* Moon */
+        445px 99%,
+        /* Satellite (right side of Moon) */
+        -22% -210px,
+        /* Sun */
+        center;
+    /* Stars */
+
+    background-size:
+        25%,
+        /* Earth */
+        10%,
+        /* Moon */
+        6%,
+        /* Satellite */
+        43%,
+        /* Sun */
+        auto;
+    background-attachment: scroll, scroll, scroll, fixed;
+}
+    /* ROCKET */
+
+#Rocket_image_marquee {
+
+    bottom: 0;
+    right: 0;
+    height: 5000px;
+    width: 12%;
+    float: right;
+}
+
+.Rocket_image {
+    width: 180px;  
+    float: right;
+}
+
+
+/* Astronaut */
+
+#astronaut_marquee {
+    width: 100%;
+    height: 5000px;
+    position: absolute;
+
+}
+
+#astronaut_marquee_block {
+    width: 80%;
+    height: 5000px;
+    position: absolute;
+
+}
+
+.astronaute_img {
+    width: 150px;
+    height: 130px;
+
+}
+
+/* Astroid */
+#astroid_marquee {
+    width: 100%;
+    height: 5000px;
+    position: absolute;
+}
+
+#astroid_marquee_block {
+    width: 100%;
+    height: 5000px;
+}
+
+.astroid_img {
+    width: 150px;
+    height: 145px;
+}

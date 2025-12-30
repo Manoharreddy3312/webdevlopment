@@ -1,0 +1,30 @@
+#solor_system{
+    width: 500px;
+    height: 500px;
+    border-radius: 150px;
+
+    
+}
+
+.background_image{
+background-image: 
+    url("../../../assets/images/Earth.png"),
+    url("../../../assets/images/sun.png"),
+    url("../../../assets/images/stars.png");
+
+background-position:
+    10% 95%, /* earth*/
+    95% 10%,  /* sun*/  
+    50% 50%;  /* stars*/  
+
+background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat;
+
+background-size:
+    180px,
+    180px,
+    cover;
+
+ }

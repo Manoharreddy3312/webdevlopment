@@ -1,0 +1,88 @@
+/* combinator selectors */
+#parent_block {
+    width: 150px;
+    height: 150px;
+    background-color: purple;
+    cursor: pointer;
+}
+
+#child_block {
+    width: 75px;
+    height: 75px;
+    background-color: white;
+}
+
+/* child selector ( > ) */
+#parent_block:hover > #child_block {
+    background-color: black;
+}
+
+#grand_parent_container {
+    width: 150px;
+    height: 150px;
+    background-color: gray;
+    cursor: pointer;
+}
+
+#parent_container {
+    width: 75px;
+    height: 75px;
+    background-color: greenyellow;
+}
+
+#child_container {
+    width: 37.5px;
+    height: 37.5px;
+    background-color: gray;
+}
+
+#grand_child_container {
+    width: 50%;
+    height: 50%;
+    background-color: greenyellow;
+}
+
+/* descendent selector (space) */
+#grand_parent_container:hover #child_container {
+    background-color: black;
+}
+
+#parent_container:hover #grand_child_container {
+    background-color: white;
+}
+
+
+.color_blocks{
+    float: left;
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+
+}
+
+#orange_color_block{
+    background-color: orange;
+
+}
+#white_color_block{
+    background-color: white;
+}
+#green_color_block{
+    background-color: green;
+}
+#darkblue_color_block{
+    background-color: darkblue;
+}
+#gray_color_block{
+    background-color: gray;
+}
+/* adjacent sibling selector(+) */
+#orange_color_block:hover+#white_color_block{
+    background-color: gray;
+}
+
+/* Generali sibling selector(~) */
+#orange_color_block:hover~#gray_color_block{
+    background-color: white;
+    border: black 1px solid;
+}

@@ -1,0 +1,100 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: ProductSans;
+}
+
+@font-face{
+    font-family: ProductSans;
+    src: url(../../../assets/fonts/ProductSans.ttf);
+}
+
+body{
+    padding: 10px;
+    margin-top: 20px;
+}
+
+#validation_form{
+    width: 650px;
+    padding: 20px;
+    background-color: rgb(170, 141, 170);
+
+    border-radius: 50px;
+    
+}
+
+#validation_form_heading{
+    font-size: 65px;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+.validation_input_boxes{
+    width: 75%;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#gender_radio_buttons_container,
+#terms_conditions_checkbox_container{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#gender_heading{
+    font-size: 50px;
+}
+
+/*
+attribute selector
+element_selector[attribute_name="attribute_value"]{
+    property: value;
+    property: value;
+}
+*/
+
+input[type="radio"], 
+input[type="checkbox"]{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+#validate_button{
+    font-size: 45px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    background-color: white;
+    cursor:pointer;
+}
+#validate_button:hover{
+    background-color:rgb(61, 193, 61);
+    color: white;
+}
+
+.validation_input_boxes:valid{
+    border: 3px solid green;
+}
+
+.validation_input_boxes:invalid{
+    border: 3px solid red;
+}
+
+.validation_radio_buttons:checked,
+.validation_checkboxes:checked{
+    /* width: 35px;
+    height: 35px; */
+    transform: scale(1.5);
+}

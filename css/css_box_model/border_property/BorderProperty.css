@@ -1,0 +1,102 @@
+.border_propert_block {
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-color: greenyellow;
+    border-width: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+
+#Solid_border_property {
+    border-style: dashed;
+}
+
+#Dashed_border_property {
+    border-style: dashed;
+}
+
+#Dotted_border_property {
+    border-style: dotted;
+
+
+}
+
+#Double_border_property {
+    border-style: double;
+
+}
+
+#Inset_border_property {
+    border-style: inset;
+    border-color: black;
+
+}
+
+#Outset_border_property {
+    border-style: outset;
+    
+}
+
+#Grove_border_property {
+    border-style: groove;
+    background-image: url(../../assets/images/Earth.png);
+    background-color: transparent;
+     border-color:black;
+
+}
+
+#Ridge_border_property {
+    border-style: ridge;
+    background-image: url(../../assets/images/sun.png);
+    background-color: transparent;
+     border-color: orange;
+
+}
+#border_shortest{
+    width: 100px;
+    height: 100px;
+    float: left;
+
+}
+.shortest{
+    border: 30px double blue;
+}
+
+#border_properties{
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+.border{
+    /* border-top: 30px;
+    border-top-color: red;
+    border-top-style: solid;
+    border-top-width: 20px; */
+    border-top: 30px solid red;
+
+    /* border-right: 30px;
+    border-right-color: green;
+    border-right-style: dashed;
+    border-right-width: 20px; */
+    border-right: 30px solid green;
+
+    /* border-bottom: 30px;
+    border-bottom-color: yellow;
+    border-bottom-style: dotted;
+    border-bottom-width: 20px; */
+
+
+    border-bottom: 30px dotted yellow;
+
+    /* border-left: 30px;
+    border-left-color: magenta;
+    border-left-style: double;
+    border-left-width: 20px; */
+
+    border-left: 30px double magenta;
+
+
+
+}

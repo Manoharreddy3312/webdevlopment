@@ -1,0 +1,118 @@
+/* simple selectors */
+/* Universal selector (*)*/
+/* *{
+  font-size: 30px;
+} */
+
+/* element selector(tagname) */
+/* h1{
+    font-size: 45px;
+    color: red;
+}
+
+button{
+    font-size: 50px;
+    font-weight: bold;
+    color: darkblue;
+    background-color: lightgrey;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+} */
+
+/* id selector(#) */
+/* h1{
+    font-size: 50px;
+
+}
+#core_java_heading{
+    color: red;
+}
+
+#core_python_heading{
+    color: darkblue;
+}
+
+#web_development_heading{
+    color: greenyellow;
+    width: fit-content;
+    background-color: gray;
+}
+button{
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+#subscribe_button{
+    background-color: red;
+    border-radius: 30px;
+}
+
+#follow_botton{
+   background-color: royalblue;
+   border-radius: 10px;    
+}
+
+/* class selectors */
+/* .increase_font_size{
+    font-size: 45px;
+}
+
+.text_darkblue{
+    color: darkblue;
+}
+.color_changes{
+    color: white;
+    background-color: red;
+}
+#scrollable_content_marquee{
+    font-weight: bold;
+
+} */ 
+@import url('https://fonts.googleapis.com/css2?family=Underdog&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+
+#batch_schedule_table_caption{
+    color: white;
+    font-size: 75px;
+    background-color: purple;
+    font-weight: bold;
+    font-family: StindleSerifDemo;
+}
+@font-face {
+    font-family: StindleSerifDemo;
+    src: url(../../../assets/fonts/StindleSerifDemo.ttf);
+}
+
+#batch_schedule_table_head{
+    color:orange;
+    background-color: black;
+}
+
+.batch_schedule_table_head_cells{
+    font-size: 50px;
+    font-family: Underdog;
+
+}
+
+.batch_schedule_table_body_cells{
+    font-size: 30px;
+    font-family:Merienda;
+}
+/* GroupSelector */
+#batch_schedule_table_body_first_row,
+#batch_schedule_table_body_third_row{
+   
+    background-color: lightgray;
+}
+
+.lightgray_rows{
+    background-color: lightgray;
+}
+
+.lavender_blush_rows{
+    background-color:lavenderblush;
+}
+

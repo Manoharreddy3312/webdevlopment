@@ -1,0 +1,40 @@
+#flower_task{
+    width: 400px;
+    height:400px;   
+
+}
+.flowercontainers{
+    width: 50%;
+    height: 50%;
+    background-color: orange;
+    float: left;
+}
+#first_petal{
+    background-color: red;
+    border-bottom-right-radius: 0%;
+}
+#second_petal{
+    border-bottom-left-radius: 0%;
+    background-color: blue;
+}
+    
+    #third_petal{
+        background-color: orange;
+        border-top-right-radius: 0%;
+
+    }
+    #fouth_petal{
+        background-color: green;
+        border-top-left-radius: 0%;
+
+}
+#first_petal,#fouth_petal{
+     border-top-right-radius: 50%;
+     border-bottom-left-radius: 50%;
+}
+#second_petal,#third_petal  {
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+}
+
+
