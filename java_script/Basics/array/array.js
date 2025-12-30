@@ -28,25 +28,59 @@
 // ! METHODS OF ARRAY :
 // ====================
 
-// Basic Array Methods
-// Array length
-// Array toString()
-// Array at()
-// Array join()
-// Array pop()
-// Array push()
-// Array shift()
-// Array unshift()
-// Array isArray()
-// Array delete()
-// Array concat()
-// Array copyWithin()
-// Array flat()
-// Array slice()
-// Array splice()
-// Array toSpliced()
+// Basic Array Methods:
+// =============================================================================
+//! 1.Array length : length property of an array returns the number of elements in that array.
 
+//! 2.Array toString():toString() method converts an array to a string of comma-separated values.
 
+//! 3.Array at(): at() method takes an integer value and returns the item at that index, allowing for positive and negative integers.
+
+//! 4.Array join(): join() method creates and returns a new string by concatenating all of the elements in an array
+
+//! 5.Array pop(): pop() method removes the last element from an array and returns that element. This method changes the length of the array.
+
+//! 6.Array push(): push() method adds one or more elements to the end of an array and returns the new length of the array.
+
+//! 7.Array shift(): shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
+
+//! 8.Array unshift(): unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
+
+//! 9.Array isArray(): isArray() method determines whether the passed value is an Array.
+
+//! 10.Array delete(): delete() operator removes an element from an array at a specified index.
+
+//! 11.Array concat(): concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
+
+//! 12.Array copyWithin(): copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
+
+//! 13.Array flat(): flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+
+//! 14.Array slice(): slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array.
+
+//! 15.Array splice(): splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+
+//! 16.Array toSpliced(): toSpliced() method returns a new array with some elements removed and/or replaced, without modifying the original array.
+
+//! 17.Array fill(): fill() method changes all elements in an array to a static value, from a start index (default 0) to an end index (default array.length). It returns the modified array.
+
+//! 18.Array indexOf(): indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
+
+//! 19.Array lastIndexOf(): lastIndexOf() method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
+
+//! 20.Array reverse(): reverse() method reverses an array in place. The first array element becomes the last, and the last array element becomes the first.
+
+//! 21.Array sort(): sort() method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, built upon converting the elements into
+
+//! 22.Array flatMap(): flatMap() method first maps each element using a mapping function, then flattens the result into a new array. It is identical to a map() followed by a flat() of depth 1.
+
+//! 23.Array from(): from() method creates a new, shallow-copied Array instance from an array-like or iterable object.
+
+//! 24.Array isArray(): isArray() method determines whether the passed value is an Array.
+
+//! 25.Array of(): of() method creates a new Array instance with a variable number of arguments, regardless of number or type of the arguments.
+
+// ====================================================================================================================
 //! 1.LENGTH:
 
 // let arr = ["html","css","js"]
