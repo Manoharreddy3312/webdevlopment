@@ -250,7 +250,6 @@
 
 //! ---------------USING FUNCTION AS A CONSTRUCTOR-------------------
 
-
 // function Cake(cname,cprice){
 //     this.cake_name = cname;
 //     this.cake_price = cprice;
@@ -269,7 +268,6 @@
 // ! math(): The Math object provides properties and methods for mathematical constants and functions.
 
 // console.log(Math.PI); //! 1
-
 // let a = Math.floor(20.2) //! 2
 // let a = Math.ceil(20.2)  //! 3
 // let a = Math.round(20.2)  //! 4
@@ -281,20 +279,86 @@
 // let a = Math.cbrt(27) //! 9
 // let a = Math.pow(5,2) //! 10
 // let a = Math.pow(5,2) //! 11
-// console.log(a); //! 12
+// console.log(a);
 
 // =================================================================================
-
-
 
 // git add .
 // git commit -m "commit"
 // git push --set-upstream origin main
 // git push
 
+// =================================================================================
 
 
+// ! -------OBJECT METHODS-----------
 
+
+// let emp = {
+//     name : "kl rahul",
+//     age : 31,
+//     city : "Karnataka"
+// }
+
+
+// let objectkeys = Object.keys(emp)  //! ---1
+// console.log(objectkeys);
+
+// let objectvalues = Object.values(emp)  //! ---2
+// console.log(objectvalues);
+
+
+// Object.freeze(emp) //!---3
+// emp.state = "Telangana";
+// console.log(Object.freeze);
+
+
+// Object.isFrozen(emp)  //! ---4
+// console.log(Object.isFrozen(emp));
+
+// Object.seal(emp)  //! ---5
+// emp.state = "Telangana";
+// console.log(Object.seal(emp));
+
+// Object.isSealed(emp)  //! ---6
+// console.log(Object.isSealed(emp));
+
+// ===================================================================
+
+// !-----------DATE & TIME -----------------
+
+// let a = new Date()
+// console.log(a);
+// let year = a.getFullYear()
+// console.log(year);
+// console.log(a.getFullYear());
+// console.log(a.getMonth());
+// console.log(a.getDay());
+// console.log(a.getHours());
+// console.log(a.getMinutes());
+// console.log(a.getSeconds());
+// console.log(a.getMilliseconds());
+// console.log(a.getTime());
+// console.log(a.getTimezoneOffset());
+// console.log(a.getUTCDay());
+// console.log(a.toLocaleDateString());
+// console.log(a.toLocaleTimeString());
+
+// let b = new Date()
+
+// console.log(b.setFullYear(2026,0,1));
+// console.log(b.setHours(13));
+
+
+let ref = new Date();
+let day = ["Sunday", "Monday","Tueday","Wednesday","Thursday","Friday","Saturday"]
+let dayCount = ref.getDay();
+console.log(day[dayCount]);
+console.log(day[3]);
+
+// ===================================================================
+
+         
 
 
 
