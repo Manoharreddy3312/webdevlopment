@@ -1,0 +1,47 @@
+Array Methods:
+==============
+
+1.length(): it is used to find the length of the array.
+2.push(element1,element2,...,elementN): it is used to add the element at the end of the array.
+3.pop(): it is used to remove the last element from the array.
+4.unshift(element1,element2,...,elementN): it is used to add the element at the beginning of the array.
+5.shift(): it is used to remove the first element from the array.
+6.indexOf(element,start_index): it is used to find the index of the given element in the array.
+note: pop and shift no arguments method
+7.slice(start_index,end_index):it is used to fetch a part of the array.it will not effect the original array.
+   --> end_index will be excluded.
+8.splice(start_index,number_of_elements_to_remove,element1,element2,...): it is used to add or remove the elements from the array.
+ here we will pass the start_index value,then we will pass the number of elements to be removed and then we will pass the elements to be added.
+ this method will effect the original array.
+9.concat(array1,array2,...,arrayN): it is used to merge 2 or morethan 2 arrays.it will not effect the original array.
+10.map():it is used to iterate over each and evry method prasent in an array
+   -->it will return new array based on the operation perform.
+11.filter():this method is used to filter the given array based on the condition
+        --> evry time it will retun new array/filterd array
+12.reduce():this method is used to reduce all the elements prasent in the array to an single value.
+13.some():this method will iterate over the element prasent in the array and if any one element satisfies the condition it will true otherwise False
+14.Every(): this method will iterate over the evry element prasent in an array and if alla elements satisfies the condition,then only
+return true otherwise False
+15.includes(): this method will iterate over the evry element prasent in an string and if all elements satisfies the condition,then only
+return true otherwise False
+
+16.find():this method will iterate over the evry element prasent in the array and the first element which will satisfies the condition it will return 
+
+17.fill():it is used to fill a new element in place of the old element
+
+18.flat():this method is used to merge nested array with the parent one
+
+19.toString():to conver in to astring it will not effect original array
+
+20.revers(): this method will revers the orderof elements prasent in the array . thos will effect the original array
+
+21.from(): this method is used to convert string , html collection,node list in to array
+
+
+
+
+
+
+
+
+

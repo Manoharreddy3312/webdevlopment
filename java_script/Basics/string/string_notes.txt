@@ -1,0 +1,39 @@
+String Methods:
+==============
+1.length():it is used to find the length of the string.
+2.toLowerCase():it is used to change the entaire string in lower case.
+3.toUpperCase(): it is used to change tha entaire string in to upper case.
+4.add(): this method is used to find the charactor at given index value.
+5.charAt():it is used to find the character prasent at the given index value.does not accept negative values
+6.concat(): this method is used to merge 2 or morethan 2 strings.
+7.replace(old_val,new_val): this method replace the first matching character with the new character
+8.replaceAll("old_val,new_val): this method will replace all the matched value with the new value.
+9.repeat():this method is used to reapeat to give the string.
+10.trimStart():this method is used to remove the white space prasent in the starting of a string.
+11.trimEnd():this method is used to remove the white space prasent in the end of the string.
+12.trim(): this method is used to remove the white space  prasent in the starting of the string and ending of the string.
+13.startsWith("character"): this method is used to check wheather the given character is prasent in the starting of the string or not.
+            -->it will return boolean value
+14.endsWith("character"):this method is used to check wheather the give character IS prasent end of the string or not.
+            -->IT will return boolean value
+15.includes():it will check wheather the give character is prasent in the string or not.
+16.padStart(new_length,str1): it is used to add a new string in the starting of a string.
+17.padEnd(new_length,str1): it is used to add a new string in the ending of a sting.
+18.charCodeAt(index):this method is used to find ascii value of the character prasent at given index number.
+19.indexOf("character",index): it is used to fing the index value of the given character.
+            -->it will start searching of a character from the starting of the string unless or untill it is not specified
+20.lastIndexOf("character",index): it is usedto fing the index value of the giver character from the end of the string.
+21.slice(start_index,end_index): it is used to fetch a part of string.
+        --> in index value will be excluded.
+22.subString(start_index,end_index):it is used fetch a part of string but here,if will give -ve index value it will return 0
+23.subStr(start_index,end_index) : it is used to get a part of string but here we will pass start index value and the number of character
+               characters we want to fetch
+24.split(" "): it is used to convert a string in to array.
+
+
+
+
+
+
+
+
