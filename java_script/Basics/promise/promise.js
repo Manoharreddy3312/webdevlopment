@@ -176,29 +176,29 @@
 
 // ==================
 
-let p1 = new Promise((res, rej) => {
-    setTimeout(() => {
-       rej("i am --p1");
-    }, 4000)
-})
-let p2 = new Promise((res, rej) => {
-    setTimeout(() => {
-       rej("i am --p2");
-    }, 3000)
-})
-let p3 = new Promise((res, rej) => {
-    setTimeout(() => {
-       rej("i am --p3");
-    }, 2000)
-})
-Promise.any([p1, p2, p3]).then((v) => {
-    console.log(v);
-    console.log("then block");
-}).catch(() => {
-    console.log("catch block");
-}).finally(() => {
-    console.log("finally block");
-})
+// let p1 = new Promise((res, rej) => {
+//     setTimeout(() => {
+//        rej("i am --p1");
+//     }, 4000)
+// })
+// let p2 = new Promise((res, rej) => {
+//     setTimeout(() => {
+//        rej("i am --p2");
+//     }, 3000)
+// })
+// let p3 = new Promise((res, rej) => {
+//     setTimeout(() => {
+//        rej("i am --p3");
+//     }, 2000)
+// })
+// Promise.any([p1, p2, p3]).then((v) => {
+//     console.log(v);
+//     console.log("then block");
+// }).catch(() => {
+//     console.log("catch block");
+// }).finally(() => {
+//     console.log("finally block");
+// })
 
 
 
