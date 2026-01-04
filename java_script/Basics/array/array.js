@@ -174,8 +174,8 @@
 //     'fried rice',
 //     'gulab jamun',
 //     'Paneer chilli']
-// // 0/p : ['Chicken biryani','Chilly chicken','Chicken masala','fried rice']
-// // where food items contain the word starts with ch'
+// 0/p : ['Chicken biryani','Chilly chicken','Chicken masala','fried rice']
+// where food items contain the word starts with ch'
 
 // let arr1 = food.filter((a) => {
 //     return a.toLowerCase().includes('ch');

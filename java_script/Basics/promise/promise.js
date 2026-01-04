@@ -1,14 +1,14 @@
 // console.log("hellow");
 
 // ! PROMISE():
-// A Promise is an object representing the eventual completion or failure of an asynchronous operation.
-// It has three states: pending, fulfilled, and rejected.
-// Promises are used to handle asynchronous operations in JavaScript.
+//! A Promise is an object representing the eventual completion or failure of an asynchronous operation.
+//! It has three states: pending, fulfilled, and rejected.
+//! Promises are used to handle asynchronous operations in JavaScript.
 
 // OR
 
-// IT IS USED TO PERFORM ASYNCHRONUS TASK/OPERATION IN JavaScript.
-// A Promise is an object representing the eventual completion or failure of an asynchronous operation.
+//! IT IS USED TO PERFORM ASYNCHRONUS TASK/OPERATION IN JavaScript.
+//! A Promise is an object representing the eventual completion or failure of an asynchronous operation.
 
 
 
@@ -46,7 +46,7 @@
 // 2.allSettled
 // 3.race
 // 4.any
-//! 1.all:
+//! 1.all:  This returned promise fulfills when all of the input's promises are fulfill
 // let p1 = new Promise((res, rej) => {
 //     res("I am reolved..")
 // })
@@ -68,7 +68,7 @@
 // })
 
 // ==================================================
-//! 2.allSettled:
+//! 2.allSettled:  This returned promise fulfills when all of the input's promises settle
 
 // let p1 = new Promise((res, rej) => {
 //     res("I am reolved..")
@@ -91,7 +91,7 @@
 // })
 
 // ==================================================
-//! 3.race:
+//! 3.race: This returned promise settles with the eventual state of the first promise that settles.
 
 // let p1 = new Promise((res, rej) => {
 //     res("I am reolved..")
@@ -151,7 +151,8 @@
 
 
 // ==================================================
-//! 4.any:
+//! 4.any:  -> This returned promise fulfills when any of the input's promises fulfill, with this first fulfillment value.
+// ! -> It rejects when all of the input's promises reject 
 
 
 // let p1 = new Promise((res, rej) => {
@@ -200,13 +201,56 @@
 //     console.log("finally block");
 // })
 
+// =====================================================================
+// ! PROMISE CHAINING:
 
+// let p1 = new Promise((res,rej)=>{
+//     res("i am p1")
+// })
 
+// p1.then((v)=>{
+//     console.log("then in p1");
+// })
 
+// let p2 = new Promise((res,rej)=>{
+//     res("i am p2")
+// })
 
+// p2.then(()=>{
+//     console.log("then in p2");
+// })
 
+// p2.catch(()=>{
+//     console.log("catch in p2");
+// })
 
+// p2.finally(()=>{
+//     console.log("finally in p2");
+// })
 
+// p1.catch((v)=>{
+//     console.log("catch in p1");
+// })
+
+// let p3 = new Promise((res,rej)=>{
+//     res("i am p3")
+// })
+
+// p3.then(()=>{
+//     console.log("then in p3");
+// })
+
+// p3.catch(()=>{
+//     console.log("catch in p3");
+// })
+
+// p3.finally(()=>{
+//     console.log("finally in p3");
+// })
+
+// p1.finally((v)=>{
+//     console.log("finally in p1");
+// })
 
 
 

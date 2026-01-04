@@ -1,0 +1,47 @@
+DOM : (DOCUMENT OBJECT MODEL):
+==============================
+
+==> IT IS THE PROGRAMMING INTERFACE FOR WEB DOCUMENT
+==> IT SHOWS THE ELEMENT PRESENT IN HTML IN A TREE LIKE STRUCTURE.
+==> IT IS USED TO DELETE , ADD ,UPDATE THE ELEMENS PRESENT IN HTML
+==> WHENEVR WE WILL CHANGE ANY NODE IT WILL IN THE RELOADING OF THE ENTAIRE PAGE/WEBPAGE.
+
+
+
+PROPERTIES OF DOM:
+==================
+
+==> 1. .innerHTML
+    2. .innerText
+    3. .textContent
+    4. .tagName
+    5. .className
+    6. .id
+    7. .style
+
+METHODS IN DOM:
+===============
+
+1. getElementById()
+2. getElementsByClassName()
+3. getElementsByTagName()
+4. querySelector()
+5. querySelectorAll()
+6. createElement()
+7. appendChild()
+8. getAttribute()
+9. setAttribute()
+10.addEventListener()
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -350,11 +350,11 @@
 // console.log(b.setHours(13));
 
 
-let ref = new Date();
-let day = ["Sunday", "Monday","Tueday","Wednesday","Thursday","Friday","Saturday"]
-let dayCount = ref.getDay();
-console.log(day[dayCount]);
-console.log(day[3]);
+// let ref = new Date();
+// let day = ["Sunday", "Monday","Tueday","Wednesday","Thursday","Friday","Saturday"]
+// let dayCount = ref.getDay();
+// console.log(day[dayCount]);
+// console.log(day[3]);
 
 // ===================================================================
 
