@@ -20,7 +20,6 @@
 // p1.then(() => {
 //     console.log("Resolved then");
 // })
-
 // p1.catch(() => {
 //     console.log("rejected catch");
 
