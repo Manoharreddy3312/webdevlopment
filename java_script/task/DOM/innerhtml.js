@@ -11,7 +11,7 @@ let form = document.getElementById("formContainer").innerHTML = `
                 <label>Password</label>
                 <input type="password" placeholder="Enter password" rquired>
 
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" id="">
             </form>
         </div>
 

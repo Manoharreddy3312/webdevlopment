@@ -6,22 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<!-- <style>
-    .class{
-        width: fit-content;
-        border-radius: ;
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 10px;
     }
-</style> -->
+    #count_task{
+        background-color: orange;
+        width: 300px;
+        height: 350px;
+        padding: 15px;
+        border-radius: 10px
+    }
+   #btn,#btn1,#resetBtn{
+    background-color: aqua;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    margin-left: 15px;
+    margin-top: 10px;
+    border: none;
+
+   }
+   #resetBtn{
+    background-color: red;
+   }
+    #count{
+        font-size: 30px;
+        color: white;
+    }
+</style>
 <body>
     <center>
         <h1><u>DOCUMENT OBJECT MODEL IN JS</u></h1>
     </center>
     <br>
 
-    <div id="root">i am root</div>
+    <!-- <div id="root">i am root</div>
 
     <div class="content" >CONTENT1</div>
-    <div class="content" >CONTENT2</div>
+    <div class="content" >CONTENT2</div> -->
+<br><br>
+<div id="count_task">
+    <div id="count">Count: 0</div>
+<br>
+    <button id="btn">Increament</button>
+    <button id="btn1">decreament</button>
+    <button id="resetBtn">Reset</button>
+
+</div>
+
 
 
     <script src="dom.js"></script>
