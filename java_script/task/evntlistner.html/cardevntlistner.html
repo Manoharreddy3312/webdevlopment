@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wishlist Cards</title>
+    <link rel="stylesheet" href="cardevntlistner.css">
+</head>
+<body>
+
+<h2>🛍️ Products</h2>
+
+<div class="products">
+    <div class="card">
+        <img src="/assets/images/watch.png" alt="Product">
+        <h3>Product 1</h3>
+        <button onclick="addToWishlist('Product 1')">❤️ Add to Wishlist</button>
+    </div>
+
+    <div class="card">
+        <img src="/assets/images/microcontroller.png" alt="Product">
+        <h3>Product 2</h3>
+        <button onclick="addToWishlist('Product 2')">❤️ Add to Wishlist</button>
+    </div>
+</div>
+
+<h2>💖 Wishlist</h2>
+<ul id="wishlist"></ul>
+
+<script src="cardevntlistner.js"></script>
+</body>
+</html>
