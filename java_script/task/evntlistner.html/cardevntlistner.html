@@ -22,6 +22,14 @@
         <button onclick="addToWishlist('Product 2')">❤️ Add to Wishlist</button>
     </div>
 </div>
+<div class="quantity-control">
+    <label for="quantity">Quantity:</label>
+    <button onclick="decrementQuantity()">−</button>
+    <input type="number" id="quantity" value="1" min="1">
+    <button onclick="incrementQuantity()">+</button>
+    <button onclick="addSelectedToWishlist()">Add Selected</button>
+</div>
+
 
 <h2>💖 Wishlist</h2>
 <ul id="wishlist"></ul>
