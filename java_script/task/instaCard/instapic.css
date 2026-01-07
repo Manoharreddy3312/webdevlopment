@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 10px;
+}
+#inst_card{
+    width: 350px;
+    height: 350px;
+    margin-left: 10em;
+    margin-top: 10em;
+    background-color: rgb(142, 109, 109);
+    border-radius: 20px;
+    padding: 10px;
+
+}
+
+.img{
+     width: 200px;
+    height: 200px;
+    margin-left: 40px;
+    margin-top: 50px;
+}
+
+#heart-button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #999;
+    padding: 8px;
+    transition: color 0.2s;
+}           
+#heart-button.liked {
+    color: #ff0000;
+}
+   
+#like_count {
+    font-size: 25px;
+    margin-top: 10px;
+}
+  

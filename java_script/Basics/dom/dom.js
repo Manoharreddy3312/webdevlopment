@@ -1,6 +1,6 @@
 
 //! METHOD                            DEFINITION
-// =======================================================================================================================
+// ==============================================================================================================
 
 // document.getElementById()	        : Select the unique element with given id. 
 //                                          In case there are 2 same ID then it selects the first element.
@@ -9,7 +9,7 @@
 // document.querySelector()	            :Select element the first element on the basic of CSS string
 // document.querySelectorALL()  	    :Select a list of elements on the basic of CSS string
 
-// =========================================================================================================================
+// ===============================================================================================================
 
 // let a = document.getElementById("root");
 // console.log(a);
