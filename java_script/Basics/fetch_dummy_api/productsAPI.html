@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MyStore - Login/Register</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        .navbar {
+            background: #222;
+            color: #fff;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            height: 50px;
+            
+        }
+
+
+        .navbar span {
+            cursor: pointer;
+            margin-left: 15px;
+        }
+
+        .navbar button {
+            padding: 6px 12px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            background: #ff3d00;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .card {
+            width: 220px;
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.2);
+        }
+
+        .title {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+        }
+
+        .rating {
+            color: orange;
+            font-size: 13px;
+        }
+
+        .wish-btn {
+            margin-top: 8px;
+            padding: 8px;
+            width: 100%;
+            border: none;
+            background: #ff3d00;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .wish-btn.active {
+            background: gray;
+        }
+
+        .wish-btn {
+            margin-top: 8px;
+            padding: 8px;
+            width: 100%;
+            border: none;
+            background: #ff3d00;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .wish-btn:hover {
+            background: #ff5722;
+            transform: scale(1.05);
+        }
+
+        .wish-btn.active {
+            background: gray;
+        }
+
+        .wish-btn.active:hover {
+            background: #888;
+        }
+
+        .qty-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .qty-box button {
+            width: 28px;
+            height: 28px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* Login/Register Styles */
+        #auth-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        #auth-container input {
+            padding: 8px;
+            margin: 5px;
+            width: 250px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        #auth-container button {
+            padding: 8px 12px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            background: #222;
+            color: #fff;
+        }
+
+        #auth-container h2 {
+            margin-bottom: 10px;
+        }
+
+        #auth-container label {
+            font-size: 14px;
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        #error-msg {
+            color: red;
+            font-size: 13px;
+        }
+
+        #grand-total {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        /* footer */
+
+        footer {
+            background: #222;
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #ff3d00;
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 14px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- AUTH CONTAINER -->
+    <div id="auth-container">
+        <h2 id="auth-title">Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <label><input type="checkbox" id="remember-me"> Remember Me</label>
+        <div id="error-msg"></div>
+        <button id="auth-btn">Login</button>
+        <button id="toggle-auth">Switch to Register</button>
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="navbar" style="display:none;">
+        <div>
+            <h2>My FaKe API sTORe </h2>
+        </div>
+        <div>
+            <span onclick="showWishlist()">Wishlist (<span id="count">0</span>)</span>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <!-- PRODUCTS -->
+    <div class="container" id="products" style="display:none;"></div>
+    <div id="grand-total"></div>
+
+    <!-- footer -->
+
+    <footer>
+        <p>© 2026 MyStore. All Rights Reserved.</p>
+        <p>
+            <a href="#">About</a> |
+            <a href="#">Contact</a> |
+            <a href="#">Privacy Policy</a>
+        </p>
+    </footer>
+
+
+    <script>
+        var isLogin = true;
+        var currentUser = null;
+
+        var authTitle = document.getElementById("auth-title");
+        var authBtn = document.getElementById("auth-btn");
+        var toggleBtn = document.getElementById("toggle-auth");
+        var errorMsg = document.getElementById("error-msg");
+        var rememberMeCheckbox = document.getElementById("remember-me");
+
+        toggleBtn.addEventListener("click", () => {
+            isLogin = !isLogin;
+            authTitle.textContent = isLogin ? "Login" : "Register";
+            authBtn.textContent = isLogin ? "Login" : "Register";
+            errorMsg.textContent = "";
+            errorMsg.style.color = "red";
+        });
+
+        authBtn.addEventListener("click", () => {
+            var username = document.getElementById("username").value.trim();
+            var password = document.getElementById("password").value.trim();
+            var remember = rememberMeCheckbox.checked;
+
+            if (!username || !password) {
+                errorMsg.textContent = "Username & Password are required!";
+                return;
+            }
+
+            var users = JSON.parse(localStorage.getItem("users") || "[]");
+
+            if (isLogin) {
+                var user = users.find(u => u.username === username && u.password === password);
+                if (user) {
+                    currentUser = username;
+                    if (remember) localStorage.setItem("currentUser", username);
+                    else sessionStorage.setItem("currentUser", username);
+                    loadUserWishlist();
+                    loginSuccess();
+                } else {
+                    errorMsg.textContent = "Invalid credentials!";
+                }
+            } else {
+                var exists = users.find(u => u.username === username);
+                if (exists) {
+                    errorMsg.textContent = "Username already exists!";
+                } else {
+                    users.push({ username, password });
+                    localStorage.setItem("users", JSON.stringify(users));
+                    errorMsg.style.color = "green";
+                    errorMsg.textContent = "Registered successfully! You can login now.";
+                }
+            }
+        });
+
+        window.addEventListener("load", () => {
+            var savedUser = localStorage.getItem("currentUser") || sessionStorage.getItem("currentUser");
+            if (savedUser) {
+                currentUser = savedUser;
+                loadUserWishlist();
+                loginSuccess();
+            }
+        });
+
+        function loginSuccess() {
+            document.getElementById("auth-container").style.display = "none";
+            document.querySelector(".navbar").style.display = "flex";
+            document.getElementById("products").style.display = "flex";
+            document.getElementById("grand-total").style.display = "block";
+            initProducts();
+        }
+
+        function logout() {
+            localStorage.removeItem("currentUser");
+            sessionStorage.removeItem("currentUser");
+            currentUser = null;
+            wishlist = [];
+            document.getElementById("auth-container").style.display = "flex";
+            document.querySelector(".navbar").style.display = "none";
+            document.getElementById("products").style.display = "none";
+            document.getElementById("grand-total").innerText = "";
+            document.getElementById("username").value = "";
+            document.getElementById("password").value = "";
+            rememberMeCheckbox.checked = false;
+            errorMsg.textContent = "";
+        }
+
+        // PRODUCTS
+        var allProducts = [];
+        var wishlist = [];
+
+        function initProducts() {
+            fetch("https://dummyjson.com/products")
+                .then(res => res.json())
+                .then(data => {
+                    allProducts = data.products.map(p => {
+                        p.qty = 1;
+                        p.basePrice = p.price;
+                        return p;
+                    });
+
+                    wishlist.forEach(w => {
+                        var prod = allProducts.find(p => p.id === w.id);
+                        if (prod) prod.qty = w.qty;
+                    });
+
+                    displayProducts(allProducts);
+                });
+        }
+
+        function displayProducts(products, isWishlist = false) {
+            var container = document.getElementById("products");
+            container.innerHTML = "";
+            products.forEach(p => {
+                var isWish = wishlist.some(w => w.id === p.id);
+                var displayPrice = isWishlist ? (p.basePrice * p.qty) : p.basePrice;
+
+                container.innerHTML += `
+        <div class="card" onclick="openProductDetails(${p.id})">
+          <img src="${p.thumbnail}">
+          <div class="title">${p.title}</div>
+          <div class="price">₹${displayPrice}</div>
+          <div class="rating">⭐ ${p.rating}</div>
+
+          <div class="qty-box">
+            <button onclick="changeQty(event, ${p.id}, -1)">−</button>
+            <span>${p.qty}</span>
+            <button onclick="changeQty(event, ${p.id}, 1)">+</button>
+          </div>
+
+          <button class="wish-btn ${isWish ? 'active' : ''}" onclick="toggleWishlist(event, ${p.id})">
+            ${isWish ? 'Remove from Wishlist' : 'Add to Wishlist'}
+          </button>
+        </div>
+      `;
+            });
+
+            if (isWishlist) updateGrandTotal();
+            else document.getElementById("grand-total").innerText = "";
+        }
+
+        function changeQty(event, id, delta) {
+            event.stopPropagation(); // prevent card click
+            var product = allProducts.find(p => p.id === id);
+            if (!product) return;
+            if (delta === -1 && product.qty === 1) return;
+            product.qty += delta;
+
+            var wishProduct = wishlist.find(w => w.id === id);
+            if (wishProduct) wishProduct.qty = product.qty;
+
+            saveUserWishlist();
+            var isWishlistPage = wishlist.includes(product);
+            displayProducts(isWishlistPage ? wishlist : allProducts, isWishlistPage);
+        }
+
+        function toggleWishlist(event, id) {
+            event.stopPropagation(); // prevent card click
+            var product = allProducts.find(p => p.id === id);
+            var index = wishlist.findIndex(p => p.id === id);
+            if (index === -1) wishlist.push({ ...product });
+            else wishlist.splice(index, 1);
+
+            saveUserWishlist();
+            document.getElementById("count").innerText = wishlist.length;
+            displayProducts(allProducts);
+        }
+
+        function showWishlist() {
+            displayProducts(wishlist, true);
+        }
+
+        function updateGrandTotal() {
+            var total = wishlist.reduce((sum, p) => sum + p.basePrice * p.qty, 0);
+            document.getElementById("grand-total").innerText = `Grand Total: ₹${total}`;
+        }
+
+        function saveUserWishlist() {
+            if (!currentUser) return;
+            localStorage.setItem(`wishlist_${currentUser}`, JSON.stringify(wishlist));
+        }
+
+        function loadUserWishlist() {
+            if (!currentUser) return;
+            wishlist = JSON.parse(localStorage.getItem(`wishlist_${currentUser}`) || "[]");
+            document.getElementById("count").innerText = wishlist.length;
+        }
+
+        // PRODUCT DETAILS PAGE
+        function openProductDetails(id) {
+            localStorage.setItem("selectedProduct", id);
+            window.location.href = "product.html";
+        }
+    </script>
+</body>
+
+</html>
