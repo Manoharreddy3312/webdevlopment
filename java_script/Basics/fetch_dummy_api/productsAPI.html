@@ -403,7 +403,7 @@
         }
 
         function changeQty(event, id, delta) {
-            event.stopPropagation(); // prevent card click
+            event.stopPropagation();
             var product = allProducts.find(p => p.id === id);
             if (!product) return;
             if (delta === -1 && product.qty === 1) return;
