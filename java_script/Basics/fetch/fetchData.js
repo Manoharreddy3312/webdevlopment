@@ -1,6 +1,6 @@
-// // !FETCH:
-// // =======
-// // it IS THE PROMISE BASED INBUILT METHOD WHICH IS USED TO GET THE DATA FROM THE SERVER.(backend)
+//! FETCH:
+
+// it IS THE PROMISE BASED INBUILT METHOD WHICH IS USED TO GET THE DATA FROM THE SERVER.(backend)
 
 // fetch("https://dummyjson.com/recipes").then((res) => {
 //     return res.json()
