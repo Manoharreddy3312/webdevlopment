@@ -316,11 +316,43 @@
 
 
 
+// create a array of 10 random numbers
+// let arr = []
+// for (let i = 0; i < 10; i++) {
+//     arr.push(Math.floor(Math.random() * 100));
+// }
+// console.log(arr);
+
+// array: it is a collection of items as a list of items in js array is an object
+// array is a collection of items as a list of items in js array is an object
+
+
+// i want to fetch any dummy api
+// let url = 'https://jsonplaceholder.typicode.com/posts'
+// fetch(url).then((response)=>{
+//     response.json().then((data)=>{
+//         console.log(data);
+//     })
+// })
+// .then((error)=>{
+//     console.log(error);
+// })
+
+
+// i wannt to fetch the data from the api
+// let url = 'https://jsonplaceholder.typicode.com/posts'
+// fetch(url).then((response)=>{
+//     response.json().then((data)=>{
+//         console.log(data);
+//     })
+// })
+// .then((error)=>{
+//     console.log(error);
+// })
 
 
 
-
-
+// wap to pri
 
 
 
