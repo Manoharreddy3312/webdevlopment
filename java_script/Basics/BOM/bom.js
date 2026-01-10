@@ -22,7 +22,7 @@
 // language        : Current browser language.
 // cookieEnabled    : Return cookie status.
 // online        : It returns current connection status
-//                 [online or offline]
+//                 [online or offline
 
 // 3. navigator
 // 4. location
@@ -33,3 +33,4 @@
 
 // GENERATE 6- DEGIT OTP 
 
+// javascript
