@@ -10,7 +10,41 @@
 //! IT IS USED TO PERFORM ASYNCHRONUS TASK/OPERATION IN JavaScript.
 //! A Promise is an object representing the eventual completion or failure of an asynchronous operation.
 
+// ! we have 3 states of a promis:
 
+// 1. resolve or fullfill
+// 2. reject
+// 3. pending
+
+//  we have 3 block which will exicute based on the sate of a promis
+
+// 1.then
+// 2.catch
+// 3.finally
+
+
+
+// foure static methods:
+
+// 1 promise.all() : this method will check if all the promises are inresolve state in that case then block will execute
+                    // if any one promis is in rejected in that case catch block will exicute
+
+// 2 promise.allSettled() : in this method all the promises should be setteld mode either it can be rejected 
+//                          in that case then block wil execute
+
+// 3 promise.race() : in this method the promise which will get executed first based on the result of that promise 
+                        // then and catch block will exicute
+
+
+// 4 promise.any() : this method will search for the first resolve promise if all promises are rejected state 
+                        // in that case catch block will exicute
+
+//promise chaining : promise witch is dependent on another promise for execution is called as promise chaining
+
+
+
+
+// ================================================================================================================
 
 // let p1 = new Promise((req, rej) => {
 //     req("i am resolved")

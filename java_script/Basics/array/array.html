@@ -7,6 +7,18 @@
 </head>
 <body>
     <center><h1>learning array methods</h1></center>
-    <script src="array.js"></script>
+    <!-- <script src="array.js"></script> -->
+
+    <script src="">
+        fetch('https://dummyjson.com/products')
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+        data.products.map((product) => {
+            console.log(product.title, product.price);
+        })
+    })
+    .catch(err => console.log(err));
+    </script>
 </body>
 </html>

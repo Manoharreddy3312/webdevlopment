@@ -1,0 +1,56 @@
+
+OBJECT:
+======
+
+1.object.keys():
+
+2.object.values() : this method is used to get all the values present in object in array format 
+
+3.object.freez:  if we use this freez an object we cannot add key and value and we cannot update key and values in object
+
+4.object.isFrozen(): this is method is used to check wheather the obejct is freezed or not
+
+5.object.seal(): if we will use this method we cannot add new key and value and we cannot delete an key and value 
+                    we can update the existing 
+                    
+6.object.sealed(): it is used to check whaether the object is sealed or not
+
+7.object.assign: it is used to create a shallow copy of an object 
+
+Math object:
+============
+
+1.Math.pi : it is used to find the constant value of pi which is 22/7 = 3.1415
+
+2.Math.floor: it will give the lower value to given number  ==> 20.7 = 20
+
+3.Math.ceil: it will give the upper value to given number  ==> 20.3 = 21
+
+4.Math.prompt : it will give the round of value of a given number ==>20.4 = 20 ,,,20.5 = 21
+
+5.Math.min : it will give the minimum value present among all the values 
+
+5.Math.max : it will give the maximum value present among all the values
+
+6.Math.random : it is used to generate a random number between 0 to 1
+
+7.Math.sqrt : it is used to find the square root of an number
+
+7.Math.cbrt : it is used to find the cube root root of an number
+
+9.Math.pow : it is used to find the value of a number present in power
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -9,6 +9,28 @@
 // without async we cannot use await keyword
 // await will wait for the ppromise to get the resolved
 
+// fetch and asynca and await both are related but workingis different
+// fetch: it is used to perform on http request 
+// async await: it is used to handle asynchronus code works with promise
+
+// exmple :
+// ========
+
+// function infowait(){
+//     return new promise((resolve)=>{
+//         setTimeout(()=>{
+//             resolve("waiting time!")
+//         })
+//     })
+// }
+// async function demo() {
+//     console.log("start");
+//     let result = await infowait();
+//     console.log(result);
+//     console.log("end");
+// }
+
+// ====================================================================================================
 
 
 async function fetchRecipes() {

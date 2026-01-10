@@ -350,26 +350,24 @@
 //     console.log(error);
 // })
 
-
-
-// wap to pri
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// ! Fetching products from dummyjson API
+fetch('https://dummyjson.com/products')
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+        const container = document.getElementById("products-container");
+        data.products.map((product) => {
+            console.log(product.title, product.price);
+            if (container) {
+                const card = document.createElement("div");
+                card.className = "product-card";
+                card.innerHTML = `
+                    <img src="${product.thumbnail}" alt="${product.title}">
+                    <h3>${product.title}</h3>
+                    <p>Price: $${product.price}</p>
+                `;
+                container.appendChild(card);
+            }
+        })
+    })
+    .catch(err => console.log(err));
