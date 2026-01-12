@@ -1,0 +1,26 @@
+1.typeScript was created by Anders Hejlsberg. in 2012
+2.TypeScript is a Syntactic superset of JavaScript which adds Static superset
+TypeScript is a Syntactic superset
+
+
+why TypeScript:
+==============
+
+A project size increases, it becomes hard to maintain
+the JavaScript code as it is a loosely typed language
+
+typeScript allows specifying the types of data being passed around 
+within the code.
+the ability report errors when the types don't match
+
+1.npm init
+2.npm install typescript
+3.npx tsc (check version)
+4.tsc --init (Created a new tsconfig.json  )
+5.tsc hello.ts
+6.node hello.js
+
+for ts file directly run
+
+7.npm install ts-node
+8.npx ts-node hello.ts
