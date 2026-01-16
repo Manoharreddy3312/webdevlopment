@@ -100,7 +100,7 @@
 
 
 function info(a:string):string{
-    return `KLASSY CRICKETER ${a}`
+    return `KLASSY CRICKETER IN INDIA${a}`
 
 }
 let result = info("kl rahul")
