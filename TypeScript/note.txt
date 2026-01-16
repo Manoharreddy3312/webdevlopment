@@ -20,7 +20,8 @@ the ability report errors when the types don't match
 5.tsc hello.ts
 6.node hello.js
 
-for ts file directly run
+
+Directly run TypeScript file
 
 7.npm install ts-node
 8.npx ts-node hello.ts
