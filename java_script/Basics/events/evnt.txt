@@ -1,0 +1,55 @@
+EVENT : 
+
+==> IT IS AN ACTION OR OCCURANCE THAT HAPPNES IN A SYSTEM AND IT IS DETCTED AND THEN RESPOND TO BY A PROGRAM
+
+EVENT HANDLER:
+
+==> A FUNCTION WHICH WILL GET EXECUTED WHENEVR AN EVENT IS TRIGGERED
+
+
+TYPES OF EVENTS:
+
+1.click
+2.dbclick
+3.mouse over
+4.mouse out
+5.mouse enter
+6.mouse leave
+7.mouse down
+8.mouse up
+
+9.keypress
+10.keyUp
+11.keyDown
+12.focus
+13.blur
+14.change
+15.select
+16.submit
+17.reset
+18.load
+19.unload
+20.error
+21.input
+22.printerup
+23.printerdown
+24.printer move
+24.printer enter
+24.printer leave
+24.copy
+25.cut
+26.paste
+27.drag
+28.dragenter
+29.dragleave
+30.dragover
+31.drop
+32.dragstart
+33.dragend
+34.touchstart
+35.touchmove
+36.touchend
+37.touchcancel
+38.scroll
+39.domcontent loaded
+40.

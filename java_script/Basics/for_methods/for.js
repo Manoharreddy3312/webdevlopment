@@ -62,11 +62,12 @@ console.log()
 
 
 
-    // --------------------------------------------------------
-    //        | string       |    arry           |    Object
-    // -------|--------------|-------------------|-------------        
-    // forin  | index value  |   index value     |    keys
-    // forof  | value        |   value           |   values
-    // forEch | no index     |   no index        |    no index
+    //   | --------------------------------------------------------|
+    //   |        | string       |    arry           |    Object   |
+    //   | -------|--------------|-------------------|-------------|        
+    //   | forin  | index value  |   index value     |    keys     |
+    //   | forof  | value        |   value           |   values    |
+    //   | forEch | no index     |   no index        |    no index |
+    //   -----------------------------------------------------------
 
 
