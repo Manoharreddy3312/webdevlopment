@@ -34,22 +34,21 @@ TYPES OF EVENTS:
 22.printerup
 23.printerdown
 24.printer move
-24.printer enter
-24.printer leave
-24.copy
-25.cut
-26.paste
-27.drag
-28.dragenter
-29.dragleave
-30.dragover
-31.drop
-32.dragstart
-33.dragend
-34.touchstart
-35.touchmove
-36.touchend
-37.touchcancel
-38.scroll
-39.domcontent loaded
-40.
+25.printer enter
+26.printer leave
+27.copy
+28.cut
+29.paste
+30.drag
+31.dragenter
+32.dragleave
+33.dragover
+34.drop
+35.dragstart
+36.dragend
+37.touchstart
+38.touchmove
+39.touchend
+40.touchcancel
+41.scroll
+42.domcontent loaded
