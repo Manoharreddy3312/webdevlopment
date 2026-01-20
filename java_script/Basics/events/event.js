@@ -1,5 +1,5 @@
-// ! ---------1st way---------
 
+// ! ---------1st way---------
 // function info(){
 //     alert("I am using inline event")
 // }
@@ -92,7 +92,7 @@
 // }
 
 // user.onfocus = function info(){
-//     alert("I am using onfocus event")   
+//     alert("I am using onfocus event")
 // }
 // user.addEventListener("keypress",function info(e)){
 //     console.log(e.target.value)
@@ -175,20 +175,31 @@
 // },false)
 
 // ==========================================================================================================
+// ! video task:
+
+// let video = document.getElementById("myVideo");
+
+// video.addEventListener("mouseover", function () {
+//     this.play();
+// });
+
+// video.addEventListener("mouseout", function () {
+//     this.pause();
+// });
+
+// ==========================================================================================================
+
+//! EVENT PROPAGATION:
 
 
-console.log("print a")
+let gp = document.getElementById("gp")
+let parent = document.getElementById("parent")
+let child = document.getElementById("child")
 
 
-
-
-
-
-
-
-
-
-
+gp.addEventListener("click",function(){
+    console.log()
+},false)
 
 
 

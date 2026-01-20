@@ -5,13 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EventHandlers</title>
+
+    <style>
+        #gp {
+            height: 400px;
+            width: 400px;
+            border: 2px solid black;
+            padding: 50px;
+            margin: 50px,auto;
+        }   
+        
+        #parent {
+            height: 300px;
+            width: 300px;
+            border:2px solid red;
+            padding: 50px;
+            margin: 50px,auto;
+        }
+        
+        #child {
+            height: 200px;
+            width: 200px;
+            border:2px solid green;
+            padding: 50px;
+            margin: 50px,auto;
+        }
+
+
+
+    </style>
 </head>
 
 <!-- <button id = "btn" onclick="info()">Click Me..</button> -->
-<button id = "btn" >Click Me..</button>
+<!-- <button id = "btn" >Click Me..</button> -->
 <!-- <input type="text" id="username"> -->
 
+<!-- VIDEO TASK ON MOUSEOVER , MOUSEOUT  -->
+<!-- 
+    <video id="myVideo" width="600" height="500" style="background-color: brown; padding: 10px; margin-top: 20px;"
+        src="../../Assets/13244325-uhd_3840_2160_24fps.mp4" controls></video> -->
 
+
+<div id="gp">
+    <div id="parent">
+        <div id="child">
+
+        </div>
+    </div>
+</div>
 
 <script src="event.js"></script>
 </body>

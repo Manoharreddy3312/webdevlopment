@@ -21,6 +21,22 @@ TYPES OF EVENTS:
 10.keyUp        20.error       30.drag                  40.touchcancel
 
 
+EVENT PROPAGATION:
+==================
+
+==> ITHIS DEFINES HOW AN EVENT TRAVELS IN THE DOM TREE WHEN IT ACCURS ON AN ELEMENT.
+
+there are 3 - ways PROPAGATION CAN HAPPEN:
+
+1.Bubbling phase(default)
+2.target phase
+3.capture phase
+
+child   ==>  parent ==> grandparent
+(default)
+(target)
+(capture)
+
 
 
 
