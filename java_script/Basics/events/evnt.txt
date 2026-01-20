@@ -9,46 +9,27 @@ EVENT HANDLER:
 
 TYPES OF EVENTS:
 
-1.click
-2.dbclick
-3.mouse over
-4.mouse out
-5.mouse enter
-6.mouse leave
-7.mouse down
-8.mouse up
+1.click         11.keyDown     21.input                 31.dragenter     41.scroll         
+2.dbclick       12.focus       22.printerup             32.dragleave     42.domcontent loaded  
+3.mouse over    13.blur        23.printerdown           33.dragover
+4.mouse out     14.change      24.printer move          34.drop
+5.mouse enter   15.select      25.printer enter         35.dragstart
+6.mouse leave   16.submit      26.printer leave         36.dragend
+7.mouse down    17.reset       27.copy                  37.touchend
+8.mouse up      18.load        28.cut                   38.touchmove    
+9.keypress      19.unload      29.paste                 39.touchstart
+10.keyUp        20.error       30.drag                  40.touchcancel
 
-9.keypress
-10.keyUp
-11.keyDown
-12.focus
-13.blur
-14.change
-15.select
-16.submit
-17.reset
-18.load
-19.unload
-20.error
-21.input
-22.printerup
-23.printerdown
-24.printer move
-25.printer enter
-26.printer leave
-27.copy
-28.cut
-29.paste
-30.drag
-31.dragenter
-32.dragleave
-33.dragover
-34.drop
-35.dragstart
-36.dragend
-37.touchstart
-38.touchmove
-39.touchend
-40.touchcancel
-41.scroll
-42.domcontent loaded
+
+
+
+
+
+
+
+
+
+
+
+
+
