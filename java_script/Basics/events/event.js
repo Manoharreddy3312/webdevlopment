@@ -17,11 +17,12 @@
 
 // ! ---------3rd way---------.
 // document.getElementById("btn").addEventListener("click",function info(){
-//     alert("I am using addEventListener event")
-// },false)
-// document.getElementById("btn").addEventListener("click",info,false)
-
-
+    //     alert("I am using addEventListener event")
+    // },false)
+    // document.getElementById("btn").addEventListener("click",info,false)
+    
+    
+// ==========================================================================================================
 
 //! dbclick:
 // document.getElementById("btn").addEventListener("dblclick",function info(){
@@ -197,9 +198,31 @@ let parent = document.getElementById("parent")
 let child = document.getElementById("child")
 
 
-gp.addEventListener("click",function(){
-    console.log()
-},false)
+gp.addEventListener("click",(e)=>{
+    console.log("gp is Triggered")
+    gp.style.backgroundColor = "red"
+},true)
+
+parent.addEventListener("click",(e)=>{
+    e.stopPropagation()
+    console.log("parent is Triggered")
+    parent.style.backgroundColor = "green"
+},true)
+
+child.addEventListener("click",(e)=>{
+    e.stopPropagation()
+    e.stopImmediatePropagation()
+    console.log("child is Triggered")
+    child.style.backgroundColor = "blue"
+},true)
+
+child.addEventListener("click",(e)=>{
+    console.log("child is Triggered")
+    child.style.border = "10px solid black"
+},true)
+
+
+// ==========================================================================================================
 
 
 
