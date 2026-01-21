@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Animated Quiz App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+    }
+
+    .quiz-container {
+      width: 380px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.25);
+      animation: popIn 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.6); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    h1 {
+      text-align: center;
+      margin: 0 0 15px;
+    }
+
+    .progress {
+      height: 6px;
+      width: 100%;
+      background: rgba(255,255,255,0.2);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(135deg, #00cec9, #55efc4);
+      transition: width 0.5s ease;
+    }
+
+    .question {
+      font-size: 18px;
+      margin-bottom: 20px;
+      animation: fadeSlide 0.5s ease;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .options {
+      display: grid;
+      gap: 12px;
+    }
+
+    .option {
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.2);
+      cursor: pointer;
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+
+    .option:hover {
+      transform: scale(1.05);
+      background: rgba(255,255,255,0.35);
+    }
+
+    .option.correct {
+      background: linear-gradient(135deg, #00b894, #55efc4);
+      animation: correctPulse 0.6s ease;
+    }
+
+    .option.wrong {
+      background: linear-gradient(135deg, #ff7675, #d63031);
+      animation: shake 0.4s ease;
+    }
+
+    @keyframes correctPulse {
+      from { transform: scale(1); }
+      to { transform: scale(1.08); }
+    }
+
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-6px); }
+      50% { transform: translateX(6px); }
+      75% { transform: translateX(-6px); }
+      100% { transform: translateX(0); }
+    }
+
+    .next-btn {
+      margin-top: 20px;
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      background: linear-gradient(135deg, #fdcb6e, #e84393);
+      color: #2d3436;
+      display: none;
+      transition: transform 0.25s ease;
+    }
+
+    .next-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .result {
+      text-align: center;
+      font-size: 18px;
+      display: none;
+      animation: fadeSlide 0.5s ease;
+    }
+
+    .celebrate {
+      animation: celebrateGlow 1.2s infinite alternate;
+      box-shadow: 0 0 30px rgba(255,215,0,0.8), 0 0 60px rgba(255,105,180,0.6);
+    }
+
+    @keyframes celebrateGlow {
+      from { transform: scale(1); filter: hue-rotate(0deg); }
+      to { transform: scale(1.05); filter: hue-rotate(60deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container" id="quizContainer">
+    <h1>Quiz App</h1>
+
+    <div class="progress">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="question" id="question"></div>
+    <div class="options" id="options"></div>
+
+    <button class="next-btn" id="nextBtn">Next Question</button>
+
+    <div class="result" id="result"></div>
+    <button class="next-btn" id="restartBtn" style="display:none; margin-top:15px;">Restart Quiz</button>
+  </div>
+
+  <script>
+    const quizData = [
+      {
+        question: "What does HTML stand for?",
+        options: ["Hyper Text Markup Language", "High Text Machine Language", "Hyperlinks Text Mark Language", "Home Tool Markup Language"],
+        answer: 0
+      },
+      {
+        question: "Which language is used for styling web pages?",
+        options: ["HTML", "JQuery", "CSS", "XML"],
+        answer: 2
+      },
+      {
+        question: "Which is not a JavaScript framework?",
+        options: ["React", "Angular", "Vue", "Django"],
+        answer: 3
+      }
+    ];
+
+    const questionEl = document.getElementById('question');
+    const optionsEl = document.getElementById('options');
+    const nextBtn = document.getElementById('nextBtn');
+    const resultEl = document.getElementById('result');
+    const progressBar = document.getElementById('progressBar');
+    const quizContainer = document.getElementById('quizContainer');
+    const restartBtn = document.getElementById('restartBtn');
+
+    let currentIndex = 0;
+    let score = 0;
+    let answered = false;
+
+    function loadQuestion() {
+      answered = false;
+      nextBtn.style.display = 'none';
+      optionsEl.innerHTML = '';
+
+      const current = quizData[currentIndex];
+      questionEl.textContent = current.question;
+
+      progressBar.style.width = `${((currentIndex) / quizData.length) * 100}%`;
+
+      current.options.forEach((opt, index) => {
+        const btn = document.createElement('div');
+        btn.className = 'option';
+        btn.textContent = opt;
+        btn.onclick = () => selectAnswer(index, btn);
+        optionsEl.appendChild(btn);
+      });
+    }
+
+    function selectAnswer(index, element) {
+      if (answered) return;
+      answered = true;
+
+      const correct = quizData[currentIndex].answer;
+      const options = document.querySelectorAll('.option');
+
+      options.forEach((opt, i) => {
+        if (i === correct) opt.classList.add('correct');
+        if (i === index && i !== correct) opt.classList.add('wrong');
+      });
+
+      if (index === correct) score++;
+
+      nextBtn.style.display = 'block';
+    }
+
+    nextBtn.onclick = () => {
+      currentIndex++;
+      if (currentIndex < quizData.length) {
+        restartBtn.onclick = () => {
+      currentIndex = 0;
+      score = 0;
+      questionEl.style.display = 'block';
+      optionsEl.style.display = 'grid';
+      resultEl.style.display = 'none';
+      restartBtn.style.display = 'none';
+      quizContainer.classList.remove('celebrate');
+      loadQuestion();
+    };
+
+    loadQuestion();
+      } else {
+        showResult();
+      }
+    };
+
+    function showResult() {
+      questionEl.style.display = 'none';
+      optionsEl.style.display = 'none';
+      nextBtn.style.display = 'none';
+      progressBar.style.width = '100%';
+
+      resultEl.style.display = 'block';
+      resultEl.innerHTML = `🎉 You scored <b>${score}</b> out of <b>${quizData.length}</b>`;
+      quizContainer.classList.add('celebrate');
+      restartBtn.style.display = 'block';
+    }           
+    // <b> outof <b>${quizData.length}</b>`;
+       quizContainer.classList.add('celebrate');
+       restartBtn.style.display = 'block';
+
+   
+
+    loadQuestion();
+  </script>
+</body>
+</html>

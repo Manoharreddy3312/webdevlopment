@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Animated Tic Tac Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+    }
+
+    .game-container {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 28px 32px 32px;
+      border-radius: 22px;
+      width: 360px;
+      text-align: center;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255,255,255,0.25);
+      animation: popIn 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+
+    @keyframes popIn {
+      from {
+        transform: scale(0.7);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      margin: 0 0 15px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .status {
+      margin-bottom: 15px;
+      font-size: 16px;
+      min-height: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .cell {
+      width: 90px;
+      height: 90px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+      user-select: none;
+    }
+
+    .cell:hover {
+      transform: translateY(-6px) scale(1.06);
+      background: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+    }
+
+    .cell.x {
+      color: #ff7675;
+      animation: drawX 0.35s ease;
+    }
+
+    .cell.o {
+      color: #74b9ff;
+      animation: drawO 0.35s ease;
+    }
+
+    @keyframes drawX {
+      0% {
+        transform: scale(0) rotate(360deg);
+        opacity: 0;
+      }
+      70% {
+        transform: scale(1.2) rotate(-10deg);
+      }
+      100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+      }
+    }
+      to {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+      }
+    
+
+    @keyframes drawO {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      70% {
+        transform: scale(1.15);
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    
+
+    .cell.win {
+      background: linear-gradient(135deg, #00cec9, #55efc4);
+      color: #1e272e !important;
+      box-shadow: 0 0 25px rgba(0, 206, 201, 0.9);
+      animation: winPulse 0.6s infinite alternate;
+    }
+
+    @keyframes winPulse {
+      from { transform: scale(1); }
+      to { transform: scale(1.08); }
+    }
+
+    /* Celebration Animation */
+    .celebrate {
+      animation: celebrateGlow 1.2s infinite alternate;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.8),
+                  0 0 60px rgba(255, 105, 180, 0.6);
+    }
+
+    @keyframes celebrateGlow {
+      from {
+        transform: scale(1);
+        filter: hue-rotate(0deg);
+      }
+      to {
+        transform: scale(1.05);
+        filter: hue-rotate(60deg);
+      }
+    }
+      to {
+        transform: scale(1.08);
+      }
+    
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      background: linear-gradient(135deg, #fdcb6e, #e84393);
+      color: #2d3436;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    button:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    .footer {
+      margin-top: 12px;
+      font-size: 12px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container" id="gameContainer">
+    <h1>Tic Tac Toe</h1>
+    <div class="status" id="status">Player X's turn</div>
+
+    <div class="board" id="board">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+
+    <button id="restartBtn">Restart Game</button>
+    <!-- <div class="footer">Animated HTML • CSS • JS</div> -->
+  </div>
+
+  <script>
+    const cells = document.querySelectorAll('.cell');
+    const statusText = document.getElementById('status');
+    const restartBtn = document.getElementById('restartBtn');
+
+    let currentPlayer = 'X';
+    let gameActive = true;
+    let board = ['', '', '', '', '', '', '', '', ''];
+
+    const winningCombinations = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6]
+    ];
+
+    function handleCellClick(e) {
+      const cell = e.target;
+      const index = cell.getAttribute('data-index');
+
+      if (board[index] !== '' || !gameActive) return;
+
+      board[index] = currentPlayer;
+      cell.textContent = currentPlayer;
+      cell.classList.add(currentPlayer.toLowerCase());
+
+      checkResult();
+    }
+
+    function checkResult() {
+      let roundWon = false;
+
+      for (let combo of winningCombinations) {
+        const [a, b, c] = combo;
+        if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+          roundWon = true;
+          highlightWin(combo);
+          break;
+        }
+      }
+
+      if (roundWon) {
+        statusText.textContent = `Player ${currentPlayer} Wins! 🎉`;
+        gameActive = false;
+        return;
+      }
+
+      if (!board.includes('')) {
+        statusText.textContent = "It's a Draw 😐";
+        gameActive = false;
+        return;
+      }
+
+      currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+      statusText.textContent = `Player ${currentPlayer}'s turn`;
+    }
+
+    function highlightWin(combo) {
+      combo.forEach(index => {
+        cells[index].classList.add('win');
+      });
+
+      // Celebrate entire container
+      document.getElementById('gameContainer').classList.add('celebrate');
+    };
+    
+
+    function restartGame() {
+      currentPlayer = 'X';
+      gameActive = true;
+      board = ['', '', '', '', '', '', '', '', ''];
+      statusText.textContent = "Player X's turn";
+
+      document.getElementById('gameContainer').classList.remove('celebrate');
+
+      cells.forEach(cell => {
+        cell.textContent = '';
+        cell.className = 'cell';
+      });
+    };
+    
+
+    cells.forEach(cell => cell.addEventListener('click', handleCellClick));
+    restartBtn.addEventListener('click', restartGame);
+  </script>
+</body>
+</html>

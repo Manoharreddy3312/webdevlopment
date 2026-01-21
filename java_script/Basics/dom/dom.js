@@ -3,11 +3,11 @@
 // ==============================================================================================================
 
 // document.getElementById()	        : Select the unique element with given id. 
-//                                          In case there are 2 same ID then it selects the first element.
-// document.getElementsByClassName()    :Select collection elements with given classname
-// document.getElementsByTagName()	    :Select collection elements with given tagname
-// document.querySelector()	            :Select element the first element on the basic of CSS string
-// document.querySelectorALL()  	    :Select a list of elements on the basic of CSS string
+//                                           In case there are 2 same ID then it selects the first element.
+// document.getElementsByClassName()    : Select collection elements with given classname
+// document.getElementsByTagName()	    : Select collection elements with given tagname
+// document.querySelector()	            : Select element the first element on the basic of CSS string
+// document.querySelectorALL()  	    : Select a list of elements on the basic of CSS string
 
 // ===============================================================================================================
 

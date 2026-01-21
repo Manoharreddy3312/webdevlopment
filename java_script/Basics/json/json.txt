@@ -1,0 +1,30 @@
+JSON (JAVASCRIPT OBJECT NOTATION) :
+==================================
+
+==> JSON IS A LIGHTWEIGHT DATA TRANSFER FORMAT WHICH IS USED TO SHARE AND STORE THE DATA BETWEEN CLIENT SERVER
+==> IT IS EASY TO READ AND WRITE
+==> IT IS UNDERSTANDABLE BY MANY LANGUAGES SUCH AS ..JAVA,JAVASCRIPT,PYTHON,C#,etc.....
+
+
+there are 2 methods
+
+1.json.stringify()  ==> pass js object
+==> it is used to change js object to json file
+
+2.json.parse() ==>pass json file
+==> it is used to change json to js object
+
+
+JSON supports 6 main datatypes:
+
+1.numbet ,2.string,3.boolean,4.null,5.array,6.object
+
+
+--> it cannot contains function
+
+
+
+Destructuring:
+=============
+
+==> it is used to extract the values from the object.
