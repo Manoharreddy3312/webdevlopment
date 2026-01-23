@@ -91,7 +91,8 @@
     }
 
     .option.correct {
-      background: linear-gradient(135deg, #00b894, #55efc4);
+      /* background: linear-gradient(135deg, #00b894, #55efc4); */
+      background: linear-gradient(135deg, green, green);
       animation: correctPulse 0.6s ease;
     }
 
@@ -152,7 +153,7 @@
 </head>
 <body>
   <div class="quiz-container" id="quizContainer">
-    <h1>Quiz App</h1>
+    <h1>Quiz Application</h1>
 
     <div class="progress">
       <div class="progress-bar" id="progressBar"></div>
@@ -171,7 +172,10 @@
     const quizData = [
       {
         question: "What does HTML stand for?",
-        options: ["Hyper Text Markup Language", "High Text Machine Language", "Hyperlinks Text Mark Language", "Home Tool Markup Language"],
+        options: ["Hyper Text Markup Language",
+        "High Text Machine Language",
+        "Hyperlinks Text Mark Language",
+        "Home Tool Markup Language"],
         answer: 0
       },
       {
@@ -183,6 +187,18 @@
         question: "Which is not a JavaScript framework?",
         options: ["React", "Angular", "Vue", "Django"],
         answer: 3
+      },
+      {
+        question: "Which one of the following is used to Css Framework?",
+        options: ["React", "Bootstrap", "Vue", "Flutter"],
+        answer: 1
+        
+      },
+      {
+      question: "Which one of the following React is a? ",
+      options: ["Programming","Framework","StyleSheet","Library"],
+      answer: 3
+      
       }
     ];
 
@@ -268,8 +284,6 @@
     // <b> outof <b>${quizData.length}</b>`;
        quizContainer.classList.add('celebrate');
        restartBtn.style.display = 'block';
-
-   
 
     loadQuestion();
   </script>
