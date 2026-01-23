@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Animated Quiz App</title>
@@ -30,14 +31,21 @@
       -webkit-backdrop-filter: blur(16px);
       border-radius: 24px;
       padding: 30px;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.35);
-      border: 1px solid rgba(255,255,255,0.25);
-      animation: popIn 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      animation: popIn 0.7s cubic-bezier(.68, -0.55, .27, 1.55);
     }
 
     @keyframes popIn {
-      from { transform: scale(0.6); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
+      from {
+        transform: scale(0.6);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
 
     h1 {
@@ -48,7 +56,7 @@
     .progress {
       height: 6px;
       width: 100%;
-      background: rgba(255,255,255,0.2);
+      background: rgba(255, 255, 255, 0.2);
       border-radius: 6px;
       overflow: hidden;
       margin-bottom: 20px;
@@ -68,8 +76,15 @@
     }
 
     @keyframes fadeSlide {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .options {
@@ -80,14 +95,14 @@
     .option {
       padding: 12px 14px;
       border-radius: 14px;
-      background: rgba(255,255,255,0.2);
+      background: rgba(255, 255, 255, 0.2);
       cursor: pointer;
       transition: transform 0.25s ease, background 0.25s ease;
     }
 
     .option:hover {
       transform: scale(1.05);
-      background: rgba(255,255,255,0.35);
+      background: rgba(255, 255, 255, 0.35);
     }
 
     .option.correct {
@@ -102,16 +117,35 @@
     }
 
     @keyframes correctPulse {
-      from { transform: scale(1); }
-      to { transform: scale(1.08); }
+      from {
+        transform: scale(1);
+      }
+
+      to {
+        transform: scale(1.08);
+      }
     }
 
     @keyframes shake {
-      0% { transform: translateX(0); }
-      25% { transform: translateX(-6px); }
-      50% { transform: translateX(6px); }
-      75% { transform: translateX(-6px); }
-      100% { transform: translateX(0); }
+      0% {
+        transform: translateX(0);
+      }
+
+      25% {
+        transform: translateX(-6px);
+      }
+
+      50% {
+        transform: translateX(6px);
+      }
+
+      75% {
+        transform: translateX(-6px);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
     }
 
     .next-btn {
@@ -142,15 +176,23 @@
 
     .celebrate {
       animation: celebrateGlow 1.2s infinite alternate;
-      box-shadow: 0 0 30px rgba(255,215,0,0.8), 0 0 60px rgba(255,105,180,0.6);
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.8), 0 0 60px rgba(255, 105, 180, 0.6);
     }
 
     @keyframes celebrateGlow {
-      from { transform: scale(1); filter: hue-rotate(0deg); }
-      to { transform: scale(1.05); filter: hue-rotate(60deg); }
+      from {
+        transform: scale(1);
+        filter: hue-rotate(0deg);
+      }
+
+      to {
+        transform: scale(1.05);
+        filter: hue-rotate(60deg);
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="quiz-container" id="quizContainer">
     <h1>Quiz Application</h1>
@@ -173,9 +215,9 @@
       {
         question: "What does HTML stand for?",
         options: ["Hyper Text Markup Language",
-        "High Text Machine Language",
-        "Hyperlinks Text Mark Language",
-        "Home Tool Markup Language"],
+          "High Text Machine Language",
+          "Hyperlinks Text Mark Language",
+          "Home Tool Markup Language"],
         answer: 0
       },
       {
@@ -192,13 +234,13 @@
         question: "Which one of the following is used to Css Framework?",
         options: ["React", "Bootstrap", "Vue", "Flutter"],
         answer: 1
-        
+
       },
       {
-      question: "Which one of the following React is a? ",
-      options: ["Programming","Framework","StyleSheet","Library"],
-      answer: 3
-      
+        question: "Which one of the following React is a? ",
+        options: ["Programming", "Framework", "StyleSheet", "Library"],
+        answer: 3
+
       }
     ];
 
@@ -242,10 +284,26 @@
 
       options.forEach((opt, i) => {
         if (i === correct) opt.classList.add('correct');
+
         if (i === index && i !== correct) opt.classList.add('wrong');
       });
 
       if (index === correct) score++;
+
+
+      if (currentIndex < quizData.length - 1) {
+        nextBtn.style.display = 'block';
+      } else {
+        showResult();
+      }
+      setTimeout(() => {
+        options.forEach((opt) => {
+          opt.classList.remove('correct', 'wrong');
+        });
+      }, 2000); 
+    }
+
+    if (currentIndex === quizData.length - 1) {
 
       nextBtn.style.display = 'block';
     }
@@ -254,17 +312,17 @@
       currentIndex++;
       if (currentIndex < quizData.length) {
         restartBtn.onclick = () => {
-      currentIndex = 0;
-      score = 0;
-      questionEl.style.display = 'block';
-      optionsEl.style.display = 'grid';
-      resultEl.style.display = 'none';
-      restartBtn.style.display = 'none';
-      quizContainer.classList.remove('celebrate');
-      loadQuestion();
-    };
+          currentIndex = 0;
+          score = 0;
+          questionEl.style.display = 'block';
+          optionsEl.style.display = 'grid';
+          resultEl.style.display = 'none';
+          restartBtn.style.display = 'none';
+          quizContainer.classList.remove('celebrate');
+          loadQuestion();
+        };
 
-    loadQuestion();
+        loadQuestion();
       } else {
         showResult();
       }
@@ -280,12 +338,13 @@
       resultEl.innerHTML = `🎉 You scored <b>${score}</b> out of <b>${quizData.length}</b>`;
       quizContainer.classList.add('celebrate');
       restartBtn.style.display = 'block';
-    }           
+    }
     // <b> outof <b>${quizData.length}</b>`;
-       quizContainer.classList.add('celebrate');
-       restartBtn.style.display = 'block';
+    quizContainer.classList.add('celebrate');
+    restartBtn.style.display = 'block';
 
     loadQuestion();
   </script>
 </body>
+
 </html>
