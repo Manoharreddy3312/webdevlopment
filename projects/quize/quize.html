@@ -270,6 +270,7 @@
         const btn = document.createElement('div');
         btn.className = 'option';
         btn.textContent = opt;
+        btn.dataset.index = index;
         btn.onclick = () => selectAnswer(index, btn);
         optionsEl.appendChild(btn);
       });
@@ -282,10 +283,11 @@
       const correct = quizData[currentIndex].answer;
       const options = document.querySelectorAll('.option');
 
-      options.forEach((opt, i) => {
-        if (i === correct) opt.classList.add('correct');
+      options.forEach((opt) => {
+        const optIndex = parseInt(opt.dataset.index);
+        if (optIndex === correct) opt.classList.add('correct');
 
-        if (i === index && i !== correct) opt.classList.add('wrong');
+        if (optIndex === index && index !== correct) opt.classList.add('wrong');
       });
 
       if (index === correct) score++;
@@ -339,9 +341,16 @@
       quizContainer.classList.add('celebrate');
       restartBtn.style.display = 'block';
     }
-    // <b> outof <b>${quizData.length}</b>`;
-    quizContainer.classList.add('celebrate');
-    restartBtn.style.display = 'block';
+
+    // Shuffle options and update answer index
+    quizData.forEach(arr => {
+      const correctAnswer = arr.options[arr.answer];
+      for (let i = arr.options.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr.options[i], arr.options[j]] = [arr.options[j], arr.options[i]];
+      }
+      arr.answer = arr.options.indexOf(correctAnswer);
+    });
 
     loadQuestion();
   </script>
