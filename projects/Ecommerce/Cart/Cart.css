@@ -1,0 +1,129 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+}
+
+#cartContainer {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    position: relative; /* For positioning context */
+}
+
+#cartContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* For empty cart message */
+    font-size: 1.2rem;
+    text-align: center;
+    color: #666;
+}
+
+/* This will style the main container you are generating in JS */
+main {
+    display: contents; /* This makes the main tag act like its children are direct children of the parent */
+}
+
+.cart-item {
+    display: flex;
+    gap: 130px;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    align-items: center;
+    border-radius: 10px;
+    text-align: left; /* Reset for items */
+    transition: all 0.2s ease-in-out;
+}
+
+.cart-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease-in-out;
+    background-color: bisque;
+}
+
+.cart-item:hover img {
+    transform: scale(1.05);
+    background-color: #b35247;
+}
+
+.item-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.item-info h3 {
+    margin: 0;
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.item-info p {
+    margin: 0;
+    font-size: 1.15em;
+    color: #27ae60;
+    font-weight: 700;
+}
+
+.item-info button {
+    align-self: flex-start;
+    padding: 9px 18px;
+    border: none;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease;
+}
+
+.item-info button:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+.back_home {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    padding: 12px 24px;
+    border: none;
+    background-color: #3498db; /* A nice blue color */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease;
+}
+
+.back_home:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}

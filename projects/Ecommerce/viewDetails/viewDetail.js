@@ -2,23 +2,23 @@
 // --------- Get products from the Local Storage--------------
 
 document.addEventListener("DOMContentLoaded", () => {
-    let productDetails = document.getElementById("productDetails");
-    // console.log(productDetails)
-    let allProducts = JSON.parse(localStorage.getItem("allProducts"));
-    // console.log(allProducts);
+  let productDetails = document.getElementById("productDetails");
+  // console.log(productDetails)
+  let allProducts = JSON.parse(localStorage.getItem("allProducts"));
+  // console.log(allProducts);
 
-    let productId = localStorage.getItem("productId");
-    // console.log(productId);
+  let productId = localStorage.getItem("productId");
+  // console.log(productId);
 
-    // ---------- Find the Product-----------
+  // ---------- Find the Product-----------
 
-    if (allProducts && productId) {
-        let selectedProduct = allProducts.find((v) => {
-            return v.id == productId
-        })
-        if (selectedProduct) {
-            productDetails.innerHTML =
-                `
+  if (allProducts && productId) {
+    let selectedProduct = allProducts.find((v) => {
+      return v.id == productId
+    })
+    if (selectedProduct) {
+      productDetails.innerHTML =
+        `
  <main>
           <div class="product-container">
             <div class="product-image">
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
 
             <div class="product-info">
-              <h1>${selectedProduct.title}</h1>
+              <h1q34wyuz5ei9ovgb>${selectedProduct.title}</h1q34wyuz5ei9ovgb>
               <p><b>Brand:</b> ${selectedProduct.brand}</p>
               <p><b>Category:</b> ${selectedProduct.category}</p>
               <p><b>Description:</b> ${selectedProduct.description}</p>
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
               <div class="btn-group">
-                <button class="add-cart">Add to Cart</button>
+                <button class="add-cart" id = "addToCart")">Add to Cart</button>
                 <button class="back-home" onclick="history.back()">Back to Home</button>
               </div>
             </div>
@@ -63,18 +63,34 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </main>
 
-
-            
-               
-
             `
-        }
-        else {
-            productDetails.innerHTML = `<p>Product not Available..`
-        }
-        // console.log(selectedProduct);
+      document.getElementById("addToCart").addEventListener("click", () => {
+        addToCart(selectedProduct);
+
+      });
     }
     else {
-        productDetails.innerHTML = `<p>Product not found..`
+      productDetails.innerHTML = `<p>Product not Available..`
     }
-})
+    // console.log(selectedProduct);
+  }
+  else {
+    productDetails.innerHTML = `<p>Product not found..`
+  }
+
+});
+
+function addToCart(product) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const existingProduct = cart.find(item => item.id === product.id);
+
+  if (existingProduct) {
+    existingProduct.quantity += 1;
+  } else {
+    product.quantity = 1; // Add quantity property
+    cart.push(product);
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Product added to cart...");
+}
