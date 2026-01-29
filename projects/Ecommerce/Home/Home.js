@@ -29,11 +29,11 @@ function displayProducts(prod) {
   <h3>${val.title}</h3>
   <div class="info">
     <span class="rating">${val.rating} ★</span>
-    <p class="price">₹${(val.price * 83).toFixed(2)}</p>
+    <p class="price">₹${(val.price * 90).toFixed(2)}</p>
   </div>
   <div class="actions">
     <p class="stock">Stock: ${val.stock}</p>
-    <button>Details</button>
+    <button onclick="details(${val.id})">Details</button>
   </div>
 
   </main>
@@ -54,5 +54,21 @@ document.getElementById("search_bar").addEventListener("input", function searchI
   })
   displayProducts(filteredProduct);
 })
+
+// -------- ViewDetails page ----------
+
+function details(productId){
+  console.log(productId);
+  localStorage.setItem("productId",productId);
+  window.location.href = "../viewDetails/viewDetail.html"
+}
+
+
+
+
+
+
+
+
 
 
