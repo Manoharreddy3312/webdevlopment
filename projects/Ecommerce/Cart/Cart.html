@@ -12,7 +12,6 @@
             window.location.href = "../Login/Login.html";
         }
     </script>
-
 </head>
 <body>
     <div id="cartContainer">
@@ -22,7 +21,45 @@
          <div id="totalprice">
                 
             </div>
+        <button id="checkoutBtn" class="checkout-btn">Proceed to Checkout</button>
     </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            
+            <div id="bankStep">
+                <h2>Bank Details</h2>
+                <form id="bankForm">
+                    <input type="text" placeholder="Card Number" required pattern="\d{16}" title="Enter 16 digit card number">
+                    <input type="text" placeholder="Card Holder Name" required>
+                    <div style="display:flex; gap:10px;">
+                        <input type="text" placeholder="Expiry Date (MM/YY)" required>
+                        <input type="password" placeholder="CVV" required pattern="\d{3}" title="Enter 3 digit CVV">
+                    </div>
+                    <button type="submit">Next</button>
+                </form>
+            </div>
+
+            <div id="addressStep" style="display:none;">
+                <h2>Shipping Address</h2>
+                <form id="addressForm">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="text" placeholder="Address Line 1" required>
+                    <input type="text" placeholder="City" required>
+                    <input type="text" placeholder="Zip Code" required>
+                    <button type="submit">Place Order</button>
+                </form>
+            </div>
+
+            <div id="processingStep" style="display:none; text-align:center;">
+                <h2>Processing Payment...</h2>
+                <img src="https://cdn.dribbble.com/users/2973561/screenshots/5757826/media/221d6bfc1960ab98a7585fcc2a4d0181.gif" alt="Processing" style="width: 100%; max-width: 300px; border-radius: 10px;">
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="footer-content">
             <div class="footer-section about">

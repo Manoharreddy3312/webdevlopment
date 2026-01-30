@@ -1,5 +1,61 @@
 document.addEventListener("DOMContentLoaded", () => {
   displayCart();
+
+  const checkoutBtn = document.getElementById("checkoutBtn");
+  const modal = document.getElementById("checkoutModal");
+  const closeBtn = document.querySelector(".close-btn");
+  const bankForm = document.getElementById("bankForm");
+  const addressForm = document.getElementById("addressForm");
+  const bankStep = document.getElementById("bankStep");
+  const addressStep = document.getElementById("addressStep");
+  const processingStep = document.getElementById("processingStep");
+
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener("click", () => {
+      if (modal) {
+        modal.style.display = "block";
+        bankStep.style.display = "block";
+        addressStep.style.display = "none";
+        processingStep.style.display = "none";
+      }
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+  }
+
+  if (bankForm) {
+    bankForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      bankStep.style.display = "none";
+      addressStep.style.display = "block";
+    });
+  }
+
+  if (addressForm) {
+    addressForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      addressStep.style.display = "none";
+      processingStep.style.display = "block";
+
+      setTimeout(() => {
+        alert("Payment Successful! Your order has been placed.");
+        localStorage.removeItem("cart");
+        displayCart();
+        modal.style.display = "none";
+        window.location.href = "OrderTracking.html";
+      }, 3000); // Wait for animation
+    });
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
 })
 
 function displayCart() {
@@ -9,12 +65,14 @@ function displayCart() {
   // console.log(cartContent);
   let totalprice = document.getElementById("totalprice");
   console.log(totalprice)
+  let checkoutBtn = document.getElementById("checkoutBtn");
 
 
 
   if(cart.length===0){
     cartContent.innerHTML = `Your Cart is Empty...Start Shopping...<button class="back_home" onclick="history.back()">Back to Home</button>`;
     if(totalprice) totalprice.innerHTML = "";
+    if(checkoutBtn) checkoutBtn.style.display = "none";
     return;
   }
   
@@ -47,10 +105,6 @@ function displayCart() {
           <button onclick="removeFromCart(${i})">Remove</button>
         </div>
       </div>
-      <div>
-
-
-      </<div>
     </main>
 
  `;
@@ -58,6 +112,7 @@ function displayCart() {
   });
 
   totalprice.innerHTML = `Total Price : ₹ ${total.toFixed(2)}`;
+  if(checkoutBtn) checkoutBtn.style.display = "block";
 
 };
 
