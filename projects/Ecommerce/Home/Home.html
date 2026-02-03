@@ -12,28 +12,78 @@
             window.location.href = "../Login/Login.html";
         }
     </script>
+    <style>
+        #hamburger-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        @media (max-width: 768px) {
+            #hamburger-menu {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                padding: 1rem 0;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            nav {
+                position: relative;
+            }
+
+            #navigation_option, #search_box, .nav-links > div:last-child {
+                margin: 10px 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav>
         <div id="logo">
             <h1>GoCart</h1>
         </div>
-    <div id="navigation_option">
-        <div><a href="">Home</a></div>
-        <div><a href="">About</a></div>
-    </div>
-    <div id="search_box">
-        <input type="text" id="search_bar" placeholder="Search.."/>
-        <div id="search_logo">
-            <i class="bi bi-search"></i>
+        <div id="hamburger-menu">
+            <i class="bi bi-list"></i>
         </div>
-    </div>
-    <div style="display: flex; align-items: center; gap: 20px;">
-        <a href="../Login/Login.html" style="text-decoration: none; color: #333; font-weight: 600;">Login</a>
-        <div id="cart">
-            <a href="../Cart/Cart.html" style="color: inherit; text-decoration: none;"><i class="bi bi-cart"></i></a>
+        <div class="nav-links">
+            <div id="navigation_option">
+                <div><a href="">Home</a></div>
+                <div><a href="">About</a></div>
+            </div>
+            <div id="search_box">
+                <input type="text" id="search_bar" placeholder="Search.."/>
+                <div id="search_logo">
+                    <i class="bi bi-search"></i>
+                </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <a href="../Login/Login.html" style="text-decoration: none; color: #333; font-weight: 600;">Login</a>
+                <div id="cart">
+                    <a href="../Cart/Cart.html" style="color: inherit; text-decoration: none;"><i class="bi bi-cart"></i></a>
+                </div>
+            </div>
         </div>
-    </div>
     </nav>
     <div id="product_container">
 
