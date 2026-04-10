@@ -1,5 +1,5 @@
 let emp = {
-    name: "shubham sir",
+    name: "shub ham sir",
     age: 28,
     posission: "trainer",
 }

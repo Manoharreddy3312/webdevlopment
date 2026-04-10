@@ -80,6 +80,17 @@ counter(); // 1
 counter(); // 2
 
 
+function outer() {
+    let name = "JavaScript";
+
+    return function inner() {
+        console.log(`Hello from ${name}`);
+    };
+}
+const greet = outer();
+greet(); // Hello from JavaScript
+
+
 // ! 4 Fetch API]
 
 fetch("https://dummyjson.com/products/1")
@@ -156,5 +167,41 @@ export function add(a, b) {
 import { add } from "./math.js";
 
 console.log(add(2, 3)); // 5
+
+
+// !10. Debouncing vs Throttling
+// Debouncing and throttling are techniques for optimizing performance that help manage the frequency of function executions 
+// during events that occur at a high rate, such as typing, scrolling, or resizing.
+
+//  Debounce: Triggers the function after a set delay, but only if no additional calls are made within that time frame.
+// This is particularly beneficial for search inputs, resize events, and similar scenarios.
+
+//  Throttle: Guarantees the function executes at specific intervals, no matter how often it is activated.
+// This is especially useful for events like scroll or mouse movement.asiufhoSGHI;Osj
+
+//! Debounce
+function debounce(fn, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), delay);
+  };
+}
+
+//! Throttle
+function throttle(fn, interval) {
+  let last = 0;
+  return function (...args) {
+    const now = Date.now();
+    if (now - last >= interval) {
+      last = now;
+      fn.apply(this, args);
+    }
+  };
+}
+
+// ! GLOBAL EXECUTION CONTEXT
+// ! FUNCTION EXECUTION CONTEXT
+
 
 
