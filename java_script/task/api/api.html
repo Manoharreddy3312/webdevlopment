@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Fetching</title>
+
+<body>
+
+    <nav id="navbar" style="padding: 20px; background-color: #f0f0f0;">
+        <button onclick="loadAllProducts()" style="margin-right: 10px; padding: 10px 15px; cursor: pointer;">All Products</button>
+    </nav>
+
+    <div id="products-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; padding: 20px;"></div>
+
+    <script>
+        const navBar = document.getElementById('navbar');
+        const productsContainer = document.getElementById('products-container');
+
+        // Fetch and display categories
+        async function loadCategories() {
+            try {
+                const response = await fetch('https://fakestoreapi.com/products/categories');
+                const categories = await response.json();
+                
+                categories.forEach(category => {
+                    const button = document.createElement('button');
+                    button.textContent = category;
+                    button.style.marginRight = '10px';
+                    button.style.padding = '10px 15px';
+                    button.style.cursor = 'pointer';
+                    button.onclick = () => loadProductsByCategory(category);
+                    navBar.appendChild(button);
+                });
+            } catch (error) {
+                console.error('Error loading categories:', error);
+            }
+        }
+
+        // Fetch and display products by category
+        async function loadProductsByCategory(category) {
+            try {
+                const response = await fetch(`https://fakestoreapi.com/products/category/${category}`);
+                const products = await response.json();
+                displayProducts(products);
+            } catch (error) {
+                console.error('Error loading products:', error);
+            }
+        }
+
+        // Fetch and display all products
+        async function loadAllProducts() {
+            try {
+                const response = await fetch('https://fakestoreapi.com/products');
+                const products = await response.json();
+                displayProducts(products);
+            } catch (error) {
+                console.error('Error loading products:', error);
+            }
+        }
+
+        // Display products in container
+        function displayProducts(products) {
+            productsContainer.innerHTML = '';
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.style.border = '1px solid #ddd';
+                productCard.style.padding = '15px';
+                productCard.style.borderRadius = '5px';
+                productCard.innerHTML = `
+                    <img src="${product.image}" style="width: 100%; height: 200px; object-fit: cover; margin-bottom: 10px;">
+                    <h3>${product.title}</h3>
+                    <p>Price: $${product.price}</p>
+                    <p>${product.description.substring(0, 100)}...</p>
+                `;
+                productsContainer.appendChild(productCard);
+            });
+        }
+
+        loadCategories();
+        loadAllProducts();
+    </script>
+
+    <!-- <script src="api.js"></script> -->
+</body>
+</html>
