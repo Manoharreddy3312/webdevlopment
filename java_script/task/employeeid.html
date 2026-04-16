@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee ID Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            width: 300px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #idCardContainer {
+            margin-top: 20px;
+        }
+        .id-card {
+            width: 350px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            padding: 20px;
+            text-align: center;
+            border-top: 10px solid #007bff;
+        }
+        .id-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #007bff;
+            margin-bottom: 15px;
+        }
+        .id-card h2 {
+            margin: 10px 0 5px;
+            color: #333;
+        }
+        .id-card p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 1.1em;
+        }
+        .salary {
+            font-weight: bold;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="employeeForm">
+        <h3>Generate Employee ID</h3>
+        <input type="text" id="company_name" placeholder="Company name" required>
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="text" id="designation" placeholder="Designation" required>
+        <input type="number" id="salary" placeholder="Salary" required>
+        <input type="file" id="imageInput" accept="image/*" required>
+        <button type="submit">Create ID Card</button>
+    </form>
+
+    <div id="idCardContainer"></div>
+
+    <script>
+        const form = document.getElementById('employeeForm');
+        const container = document.getElementById('idCardContainer');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const company_name = document.getElementById('company_name').value;
+            const name = document.getElementById('name').value;
+            const designation = document.getElementById('designation').value;
+            const salary = document.getElementById('salary').value;
+            const imageInput = document.getElementById('imageInput');
+            
+            const file = imageInput.files[0];
+            const imageUrl = file ? URL.createObjectURL(file) : '';
+
+            const employee = {company_name, name, designation, salary, imageUrl };
+            console.log("Employee Details:", employee);
+
+            container.innerHTML = `
+                <div class="id-card">
+                    <img src="${imageUrl}" alt="Employee Image">
+                    
+                    <h2>${company_name}</h2>
+                    <h2>${name}</h2>
+                    
+                    <p><strong>Designation:</strong> ${designation}</p>
+                    <p class="salary"><strong>Salary:</strong> $${Number(salary).toLocaleString()}</p>
+                </div>
+            `;
+
+            form.reset();
+        });
+    </script>
+</body>
+</html>
