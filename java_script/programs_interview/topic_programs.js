@@ -180,25 +180,25 @@ console.log(add(2, 3)); // 5
 // This is especially useful for events like scroll or mouse movement.asiufhoSGHI;Osj
 
 //! Debounce
-function debounce(fn, delay) {
-  let timer;
-  return function (...args) {
-    clearTimeout(timer);
-    timer = setTimeout(() => fn.apply(this, args), delay);
-  };
-}
+// function debounce(fn, delay) {
+//   let timer;
+//   return function (...args) {
+//     clearTimeout(timer);
+//     timer = setTimeout(() => fn.apply(this, args), delay);
+//   };
+// }
 
 //! Throttle
-function throttle(fn, interval) {
-  let last = 0;
-  return function (...args) {
-    const now = Date.now();
-    if (now - last >= interval) {
-      last = now;
-      fn.apply(this, args);
-    }
-  };
-}
+// function throttle(fn, interval) {
+//   let last = 0;
+//   return function (...args) {
+//     const now = Date.now();
+//     if (now - last >= interval) {
+//       last = now;
+//       fn.apply(this, args);
+//     }
+//   };
+// }
 
 // ! GLOBAL EXECUTION CONTEXT
 // ! FUNCTION EXECUTION CONTEXT

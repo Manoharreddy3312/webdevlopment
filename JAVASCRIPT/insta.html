@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instagram</title>
+  <link rel="stylesheet" href="insta.css" />
+</head>
+<body>
+
+  <!-- ════════════════ LOGIN SCREEN ════════════════ -->
+  <div id="loginScreen">
+    <div class="login-card">
+      <h1 class="ig-logo">Instagram</h1>
+      <p class="login-sub">Sign in to continue</p>
+
+      <input type="text"     id="usernameInput" placeholder="Username" autocomplete="off" />
+      <input type="password" id="passwordInput" placeholder="Password" />
+      <p class="login-error" id="loginError">Incorrect username or password.</p>
+      <button class="login-btn" id="loginBtn">Log in</button>
+
+      <div class="login-hint">
+        <strong>Demo:</strong> username&nbsp;<code>user</code> &nbsp;/&nbsp; password&nbsp;<code>1234</code>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════ APP SCREEN ════════════════ -->
+  <div id="appScreen">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <span class="ig-logo nav-logo">Instagram</span>
+      <div class="nav-right">
+        <span class="nav-username" id="navUsername"></span>
+        <button class="logout-btn" id="logoutBtn">Log out</button>
+      </div>
+    </nav>
+
+    <!-- Feed -->
+    <div class="feed">
+      <div class="post-card">
+
+        <!-- Post Header -->
+        <div class="post-header">
+          <div class="post-user-info">
+            <div class="post-avatar">IG</div>
+            <div>
+              <div class="post-username">instagram.demo</div>
+              <div class="post-location">Hyderabad, India</div>
+            </div>
+          </div>
+          <button class="post-more-btn">•••</button>
+        </div>
+
+        <!-- Post Image -->
+        <div class="post-image">
+          <!-- <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ff7043"/>
+                <stop offset="50%" stop-color="#ffb74d"/>
+                <stop offset="100%" stop-color="#fff9c4"/>
+              </linearGradient>
+              <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#4dd0e1"/>
+                <stop offset="100%" stop-color="#006064"/>
+              </linearGradient>
+            </defs>
+            <rect width="500" height="500" fill="url(#sky)"/>
+            <ellipse cx="250" cy="195" rx="60" ry="60" fill="#ffd54f" opacity="0.95"/>
+            <ellipse cx="250" cy="200" rx="65" ry="18" fill="#ffcc02" opacity="0.3"/>
+            <path d="M0 310 Q125 270 250 300 Q375 330 500 280 L500 500 L0 500Z" fill="url(#water)"/>
+            <path d="M0 340 Q100 310 200 335 Q350 365 500 320 L500 500 L0 500Z" fill="#00838f" opacity="0.7"/>
+            <path d="M220 300 L250 195 L280 300Z" fill="#fff176" opacity="0.6"/>
+            <ellipse cx="250" cy="302" rx="30" ry="8" fill="#fff176" opacity="0.25"/>
+            <path d="M60 310 Q70 280 80 310" stroke="#5d4037" stroke-width="3" fill="none"/>
+            <ellipse cx="70" cy="278" rx="14" ry="20" fill="#2e7d32"/>
+            <path d="M420 295 Q430 265 440 295" stroke="#5d4037" stroke-width="3" fill="none"/>
+            <ellipse cx="430" cy="263" rx="14" ry="20" fill="#388e3c"/>
+            <path d="M150 500 Q155 430 165 500" stroke="#795548" stroke-width="4" fill="none"/>
+            <ellipse cx="157" cy="425" rx="22" ry="30" fill="#1b5e20"/>
+            <path d="M330 500 Q338 440 345 500" stroke="#795548" stroke-width="4" fill="none"/>
+            <ellipse cx="338" cy="435" rx="18" ry="26" fill="#2e7d32"/>
+          </svg> -->
+        </div>
+
+        <!-- Post Actions -->
+        <div class="post-actions">
+          <button class="action-btn" id="likeBtn" title="Like">
+            <svg id="heartIcon" viewBox="0 0 24 24" class="heart-icon" fill="none"
+                 stroke="#262626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06
+                       a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78
+                       1.06-1.06a5.5 5.5 0 000-7.78z"/>
+            </svg>
+          </button>
+
+          <button class="action-btn" id="commentFocusBtn" title="Comment">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#262626"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+            </svg>
+          </button>
+
+          <button class="action-btn" id="shareBtn" title="Share">
+            <svg id="shareIcon" viewBox="0 0 24 24" fill="none" stroke="#262626"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </button>
+
+          <button class="action-btn save-btn" id="saveBtn" title="Save">
+            <svg id="saveIcon" viewBox="0 0 24 24" fill="none" stroke="#262626"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Like Count -->
+        <div class="post-likes" id="likeCount">1,284 likes</div>
+
+        <!-- Caption -->
+        <div class="post-caption">
+          <span class="caption-user">instagram.demo</span>
+          Golden hour in Hyderabad 🌅 Every sunset brings the promise of a new dawn.
+          <span class="post-hashtags">#photography #hyderabad #travel #sunset #goldenHour</span>
+        </div>
+
+        <!-- Comments List -->
+        <div class="comments-section">
+          <ul class="comments-list" id="commentsList"></ul>
+        </div>
+
+        <!-- Timestamp -->
+        <div class="post-timestamp">2 HOURS AGO</div>
+
+        <!-- Comment Input -->
+        <div class="comment-input-row">
+          <div class="input-avatar" id="inputAvatar">U</div>
+          <input type="text" class="comment-input" id="commentInput"
+                 placeholder="Add a comment…" autocomplete="off"/>
+          <button class="post-comment-btn" id="postCommentBtn">Post</button>
+        </div>
+
+      </div><!-- /.post-card -->
+    </div><!-- /.feed -->
+  </div><!-- /#appScreen -->
+
+  <!-- ════════════════ SHARE MODAL ════════════════ -->
+  <div class="share-overlay" id="shareOverlay">
+    <div class="share-sheet">
+      <div class="sheet-handle"></div>
+      <h3 class="sheet-title">Share Post</h3>
+
+      <div class="share-grid">
+        <button class="share-opt" data-platform="WhatsApp">
+          <div class="share-circle" style="background:#25d366;">
+            <svg viewBox="0 0 24 24" fill="#fff" width="24" height="24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </div>
+          <span>WhatsApp</span>
+        </button>
+
+        <button class="share-opt" data-platform="Telegram">
+          <div class="share-circle" style="background:#2ca5e0;">
+            <svg viewBox="0 0 24 24" fill="#fff" width="24" height="24">
+              <path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+            </svg>
+          </div>
+          <span>Telegram</span>
+        </button>
+
+        <button class="share-opt" data-platform="Twitter">
+          <div class="share-circle" style="background:#000;">
+            <svg viewBox="0 0 24 24" fill="#fff" width="22" height="22">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.736-8.844L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </div>
+          <span>X (Twitter)</span>
+        </button>
+
+        <button class="share-opt" data-platform="Copy Link">
+          <div class="share-circle" style="background:#efefef;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+              <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/>
+              <path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>
+            </svg>
+          </div>
+          <span>Copy Link</span>
+        </button>
+      </div>
+
+      <!-- Link bar -->
+      <div class="share-link-bar">
+        <input type="text" class="share-link-input" id="shareLinkInput"
+               value="https://instagram.com/p/demo_post_001" readonly/>
+        <button class="copy-btn" id="copyLinkBtn">Copy</button>
+      </div>
+
+      <p class="copy-toast" id="copyToast"></p>
+      <button class="cancel-sheet-btn" id="cancelShareBtn">Cancel</button>
+    </div>
+  </div>
+
+  <script src="insta (1).js"></script>
+</body>
+</html>

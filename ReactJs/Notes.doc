@@ -1,0 +1,89 @@
+JAVASCRIPT:
+=========
+it is a client side scripting language and programming language which provide functionality to the web pages.
+
+it is used to create dynamic and interactive web pages. 
+it is a high level programming language which is easy to learn and use.
+it is a versatile language which can be used for both front end and back end development. 
+
+it is a popular language which is widely used in web development. 
+it is a powerful language which can be used to create complex web applications. 
+it is a language which is supported by all modern web browsers. it is a language which is constantly evolving and improving.
+
+==========================================================================================================================
+
+REACT:
+=====
+
+===========================================================================================|
+        SPA                                           MPA
+===========================================================================================|
+                                                        
+- IT LOADS SINGLE HTML PAGE                     MULTIPLE HTML FILE                         |
+  UPDATES THE PAGE DYNOMICALLY                  
+
+- IT HAVING INITIAL LOAD                        EVERY HTML FILE HAVE LOAD TIME             |
+
+- THERE IS NO RELOAD                            IT WILL TAKE RELOAD ENTIRE applications    |
+
+- It updates fast                               It updates slow                            |
+
+-DOM manipulation is very easy                DOM manipulation is very expensive           |
+
+- V-DOM :                                        REAL DOM :                                |
+
+- REACT,angular,                              JAVASCRIPT,php,                              |
+
+===========================================================================================|
+================================================================================================================================
+
+LIBRARY — you call it. You import it, use what you need, and stay in charge of the flow. It's a tool you pick up and put down.
+
+(REACT is a Library)
+
+
+FRAMEWORK — it calls you. You write code inside its structure, following its rules and conventions. It provides the skeleton; you fill in the flesh.
+
+(ANGULAR,VEW, TAILWIND CSS is a Framework)
+(REACT is not a Framework)
+
+============================================================================================================================
+
+
+REACT JS : 
+=========
+
+- IT IS AN LIBRARY OF JAVASCRIPT used TO create interactive UI
+- it is used to create SPA
+- IT WAS DEVELOPED BY "JORDAN WALKE", WHO WAS WORKING IN THE FACEBOOK(META)
+- IN THE PROTOTYPE VERSION THA NAME OF REACT.JS WAS FAX.JS
+ 
+- IN 2011 THEY DEVELOPED REACT JS FOR THERE INTERNAL USED
+- IN 2012 THEY DEPLOYED IT ON FACEBOOK NEW FEED AND THEN INSTAGRAM
+- IN 2013 THEY MADE IT OPEN SOURCE SO THAT ANY ONE CAN USE
+
+- IT IS USE VIRTUAL DOM
+- IT IS COMPONENT BASED ARCHITECTURE(REUSE THE FILE LIKE AS AN COMPONENT)
+- 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

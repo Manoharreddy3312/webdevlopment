@@ -32,22 +32,22 @@
 // ("RAHUL KL")
 
 //! Promise
-let mypromise = new promise((res,rej)=>{
-    let suc = "True";
-    if (suc){
-        res("promise resolved")
-       }else{
-        rej("promise rejected")
-       }   
-})
+// let mypromise = new promise((res,rej)=>{
+//     let suc = "True";
+//     if (suc){
+//         res("promise resolved")
+//        }else{
+//         rej("promise rejected")
+//        }   
+// })
 
-mypromise
-.then((result) => {
-console.log(result)
+// mypromise
+// .then((result) => {
+// console.log(result)
     
-}).catch((err) => {
-    console.log(err)
-});
+// }).catch((err) => {
+//     console.log(err)
+// });
 
 
 
