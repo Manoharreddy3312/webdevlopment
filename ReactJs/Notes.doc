@@ -16,12 +16,12 @@ REACT:
 =====
 
 ===========================================================================================|
-        SPA                                           MPA
+|        SPA                                           MPA(TRADITION APPLICATION)          |
 ===========================================================================================|
                                                         
 - IT LOADS SINGLE HTML PAGE                     MULTIPLE HTML FILE                         |
   UPDATES THE PAGE DYNOMICALLY                  
-
+                                                                                           |
 - IT HAVING INITIAL LOAD                        EVERY HTML FILE HAVE LOAD TIME             |
 
 - THERE IS NO RELOAD                            IT WILL TAKE RELOAD ENTIRE applications    |
@@ -47,15 +47,14 @@ FRAMEWORK — it calls you. You write code inside its structure, following its r
 (ANGULAR,VEW, TAILWIND CSS is a Framework)
 (REACT is not a Framework)
 
-============================================================================================================================
-
+==================================================================================================================================
 
 REACT JS : 
 =========
 
 - IT IS AN LIBRARY OF JAVASCRIPT used TO create interactive UI
 - it is used to create SPA
-- IT WAS DEVELOPED BY "JORDAN WALKE", WHO WAS WORKING IN THE FACEBOOK(META)
+- IT WAS DEVELOPED BY "JORDAN WALKE",WHO WAS WORKING IN THE FACEBOOK(META)
 - IN THE PROTOTYPE VERSION THA NAME OF REACT.JS WAS FAX.JS
  
 - IN 2011 THEY DEVELOPED REACT JS FOR THERE INTERNAL USED
@@ -64,18 +63,9 @@ REACT JS :
 
 - IT IS USE VIRTUAL DOM
 - IT IS COMPONENT BASED ARCHITECTURE(REUSE THE FILE LIKE AS AN COMPONENT)
-- 
-
-
-
-
-
-
- 
-
-
-
-
+- IT IS ONE- WAY DATA-BINDING IS PRESENT 
+- UNI-DIRECTIONAL 
+- IT IS DECLARATIVE
 
 
 
