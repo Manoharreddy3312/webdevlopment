@@ -1,0 +1,823 @@
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#nav{
+  height: 54px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 0px 76.0375px;
+  margin: 0px 0px 2px;
+}
+
+#logo{
+  width: 10%;
+}
+
+#logo img{
+  height: 23px;
+  width: 108px;
+  
+}
+
+#options{
+  display: flex;
+  flex-basis: 68%;
+  gap: 17px;
+  font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  padding: 0px 8px;
+}
+#options a{
+  color: #262626;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+#options a:hover{
+
+  border-bottom: 2px solid black;
+
+}
+
+#userdetails{
+  display: flex;
+  align-items: center;
+  font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+ gap: 23px;
+
+}
+#userdetails a{
+  color: #262626;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+#userdetails #drop{
+  padding-top: 5px;
+}
+#userdetails #am .hover:hover{
+
+  border-bottom: 2px solid black;
+
+}
+#am{
+  display: flex;
+  align-items: center;
+}
+
+#search{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+#search a{
+  font-size: 13px;
+}
+#userdetails #search .hover:hover{
+
+  border-bottom: 2px solid black;
+
+}
+#search #search-icon{
+  font-size: 16px;
+  padding-top: 9px;
+}
+#cart{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+#userdetails #cart .hover:hover{
+
+  border-bottom: 2px solid black;
+
+}
+#cart #cart-icon{
+  font-size: 16px;
+  padding-top: 5px;
+}
+#profile{
+  height: 30px;
+  width: 30px;
+  background-size: contain;
+  border-radius: 50%;
+}
+
+#home{
+  height: 100vh;
+}
+#scroll{
+ height: 475.25px;
+}
+#scroll img{
+  height: 475.25px;
+  width: 100vw;
+  position: absolute;
+  
+}
+
+#textinpicture{
+  height: 175.6px;
+  width: 474.29px;
+  /* border: 1px solid; */
+   font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+  top: 105px;
+  left: 100px;
+}
+
+#textinpicture #uptext a{
+  display: block;
+  color: black;
+  text-decoration: none;
+   font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  
+  
+}
+#textinpicture #midtext a{
+  display: block;
+   color: black;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+ .learn{
+  background-color: #0067B8;
+  padding: 10px 12px;
+  margin: 8px 24px 8px 0px;
+  border: none;
+  
+}
+.learn a{
+color: white;
+font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+ .learn:hover{
+  background-color: #045a9c;
+}
+
+#bars{
+  height: 44px;
+  width: 240px;
+  margin:10px auto 64px;
+  display: flex;
+  padding: 0px 10px;
+  align-items: center;
+  
+}
+#bars #pause-container{
+  height: 44px;
+  width: 44px;
+}
+#bars #pause-container a{
+  color: black;
+}
+#bars #pause{
+  font-size: 23px;
+  padding: 8px 0px;
+  
+}
+
+#bars #pause:hover {
+  content: url("data:image/svg+xml;utf8,<svg fill='black' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'><path d='M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm-32 272a16 16 0 0 1-32 0V192a16 16 0 0 1 32 0zm96 0a16 16 0 0 1-32 0V192a16 16 0 0 1 32 0z'/></svg>") ;
+ padding: 8px 20px 6px 2px;
+
+
+ 
+}
+#bars #left-container{
+  height: 44px;
+  width: 44px;
+  display: flex;
+  align-items: center;
+  transition: all 0.8s ease;
+  color: black;
+}
+
+#bars #left-container:hover{
+  transform: translatex(-12px);
+}
+
+#bars #black-container{
+   height: 44px;
+  width: 44px;
+  display: flex;
+  align-items: center;
+  color: black;
+  
+  
+}
+#bars #white-container{
+   height: 44px;
+  width: 44px;
+  display: flex;
+  align-items: center;
+  color: black;
+  
+  
+}
+
+#bars #right-container{
+  height: 44px;
+  width: 44px;
+  
+  display: flex;
+  align-items: center;
+  
+  transition: all 0.8s ease;
+  color: black;
+}
+
+#bars #right-container:hover{
+  transform: translatex(12px);
+
+}
+
+#shops{
+  width: 655.17px;
+  height: 72px;
+
+  margin:16px auto 16px;
+  display: flex;
+   font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+
+}
+#shops #first{
+  width: 220.09px;
+ 
+  height: 100%;
+  
+}
+#shops #first .image{
+  height: 40px;
+  width: 40px;
+  display: block;
+  margin:0px auto 8px;
+}
+
+#shops #first .text{
+  display: block;
+  font-size: 16px;
+  color: #0067B8;
+  text-align: center;
+  font-weight: 550;
+}
+
+
+#shops #second{
+  width: 102.49px;
+ 
+  height: 100%;
+}
+#shops #second .image{
+  height: 40px;
+  width: 40px;
+  display: block;
+  margin:0px auto 8px;
+}
+
+#shops #second .text{
+  display: block;
+  font-size: 16px;
+  color: #0067B8;
+  text-align: center;
+  font-weight: 550;
+}
+
+
+
+#shops #third{
+  width: 138.28px;
+
+  height: 100%;
+}
+
+#shops #third .image{
+  height: 40px;
+  width: 40px;
+  display: block;
+  margin:0px auto 8px;
+}
+
+#shops #third .text{
+  display: block;
+  font-size: 16px;
+  color: #0067B8;
+  text-align: center;
+  font-weight: 550;
+}
+
+
+#shops #fourth{
+  width: 194.31px;
+  
+  height: 100%;
+}
+
+#shops #fourth .image{
+  height: 40px;
+  width: 40px;
+  display: block;
+  margin:0px auto 8px;
+}
+
+#shops #fourth .text{
+  display: block;
+  font-size: 16px;
+  color: #0067B8;
+  text-align: center;
+  font-weight: 550;
+}
+
+#content-container{
+  margin: 0px 76.0375px;
+
+}
+
+#cards{
+  /* border: 1px solid; */
+  height: 442.5px;
+  display: flex;
+     font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 80px;
+
+
+}
+#card1{
+  width: 348.18px;
+  /* border: 1px solid; */
+  height: 100%;
+  padding: 6px 12px;
+  
+}
+#card11{
+ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15),
+            0 2px 6px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+#downtext{
+  margin-left: 15px;
+}
+
+#card1 a{
+  color: black;
+  text-decoration: none;
+  
+}
+#card1 img{
+  width: 100%;
+/* margin-bottom: 13px; */
+}
+#card1 .textarea{
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+#card1 .text{
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+#card1 .learn a{
+  color: white;
+}
+
+
+#card2{
+  width: 348.18px;
+  /* border: 1px solid; */
+  height: 100%;
+  padding: 6px 12px;
+  
+}
+#card22{
+ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15),
+            0 2px 6px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+#downtext{
+  margin-left: 15px;
+}
+
+#card2 a{
+  color: black;
+  text-decoration: none;
+  
+}
+#card2 img{
+  width: 100%;
+/* margin-bottom: 13px; */
+}
+#card2 .textarea{
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+#card2 .text{
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+#card2 .learn a{
+  color: white;
+}
+
+#card3{
+  width: 348.18px;
+  /* border: 1px solid; */
+  height: 100%;
+  padding: 6px 12px;
+  
+}
+#card33{
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15),
+            0 2px 6px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+#downtext{
+  margin-left: 15px;
+}
+
+#card3 a{
+  color: black;
+  text-decoration: none;
+  
+}
+#card3 img{
+  width: 100%;
+/* margin-bottom: 13px; */
+}
+#card3 .textarea{
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+#card3 .text{
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+#card3 .learn{
+  margin-top: 95px;
+}
+
+#card3 .learn a{
+  color: white;
+}
+
+
+
+
+#card4{
+  width: 348.18px;
+  /* border: 1px solid; */
+  height: 100%;
+  padding: 6px 12px;
+  
+}
+#card44{
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15),
+            0 2px 6px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+#downtext{
+  margin-left: 15px;
+}
+
+#card4 a{
+  color: black;
+  text-decoration: none;
+  
+}
+#card4 img{
+  width: 100%;
+/* margin-bottom: 13px; */
+}
+#card4 .textarea{
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+#card4 .text{
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+#card4 .learn{
+  margin-top: 75px;
+}
+#card4 .learn a{
+  color: white;
+}
+
+#windows{
+    height:515px;
+  width: 1360px;
+  margin-bottom: 80px; 
+}
+
+
+
+#windows img{
+  height:515px;
+  width: 1360px;
+  position: absolute;
+   
+  
+}
+
+#windows #textinpicture{
+  height: 175.6px;
+  width: 417.26px;
+  /* border: 1px solid; */
+   font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+  top: 105px;
+  left: 100px;
+}
+
+#windows  #textinpicture #uptext a{
+  display: block;
+  color: white;
+  text-decoration: none;
+   font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  
+  
+}
+ #windows #textinpicture #midtext a{
+  display: block;
+   color: white;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+ #windows .learn{
+  background-color: #0067B8;
+  padding: 10px 12px;
+  margin: 8px 24px 8px 0px;
+  border: none;
+  
+}
+#windows .learn a{
+color: white;
+font-weight: 550;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+ #windows .learn:hover{
+  background-color: #045a9c;
+}
+
+#buisiness{
+  font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 550;
+  padding-left: 10px;
+}
+.textarea2{
+  font-size: 29px;
+  margin-bottom: 10px;
+}
+
+#cards2{
+  /* border: 1px solid; */
+  height: 500.3px;
+  display: flex;
+     font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 80px;
+
+
+}
+#cards2 img{
+  height: 181.7px;
+  
+}
+#cards2 #card22 .learn{
+  margin-top: 45px;
+}
+#cards2 #card33 .learn{
+  margin-top: 115px;
+}
+#cards2 #card44 .learn{
+  margin-top: 45px;
+}
+
+#planet{
+    height:428px;
+  width: 1360px;
+  margin-bottom: 50px; 
+}
+
+
+
+#planet img{
+  height:428px;
+  width: 1360px;
+  position: absolute;
+  z-index: 0;
+   
+  
+}
+
+#planet #textinpicture2{
+  height: 175.6px;
+  width: 417.26px;
+  /* border: 1px solid; */
+   font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+  /* text-align: right; */
+  top: 105px;
+  z-index: 1;
+  right: -800px;
+ 
+
+  
+    
+}
+
+#planet  #textinpicture2 #uptext2 a{
+  display: block;
+  color: white;
+  text-decoration: none;
+   font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  
+  
+}
+ #planet #textinpicture2 #midtext2 a{
+  display: block;
+   color: white;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+ #planet .learn2{
+  background-color: #0067B8;
+  padding: 10px 12px;
+  margin: 8px 24px 8px 0px;
+  border: none;
+  
+}
+#planet .learn2 a{
+color: white;
+font-weight: 550;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+ #planet .learn2:hover{
+  background-color: #045a9c;
+}
+#sodhi{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  
+}
+
+#follow{
+  font-family:  "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#sodhi img{
+  height: 32px;
+  width: 32px;
+}
+#totop{
+  width: 142.46px;
+  height: 39.2px;
+  float: right;
+  padding: 10px 12px;
+  display: flex;
+   gap: 10px;
+  border: none;
+    font-family:  "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 550;
+    margin-right: 20px;
+ 
+   
+  
+
+}
+#totop a{
+  text-decoration: none;
+  color: black;
+   font-size: 16px;
+    position: sticky;
+  bottom: 25px;
+}
+#arrow{
+  font-size: 20px;
+}
+
+
+
+
+
+#footer {
+  background: #f2f2f2;
+  padding: 40px 60px;
+  font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 90px;
+  
+}
+
+
+
+
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+ 
+}
+
+
+.col {
+  width: 16%; 
+  min-width: 150px;
+}
+
+.col p {
+  font-size: 15px;
+  font-weight: 550;
+  margin-bottom: 12px;
+  color: #616161;
+}
+
+.col a {
+  display: block;
+  font-size: 11px;
+  color: #616161;
+  margin-bottom: 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.col a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+
+.footer-bottom {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #555;
+  flex-wrap: wrap;
+}
+
+.footer-bottom a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #555;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+.left{
+  display: flex;
+  align-items: center;
+  
+}
+.left p{
+  font-size: 25px;
+  padding-top: 5px;
+}
+.left #english{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.left a {
+  margin-left: 10px;
+}
+
+.divider {
+  margin: 0 10px;
+}
+.right{
+  display: flex;
+  gap: 17px;
+}

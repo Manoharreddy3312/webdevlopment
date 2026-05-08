@@ -1,0 +1,58 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+/* Navigation Bar */
+#nav{
+  height: 54px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 0px 76.0375px;
+  margin: 0px 0px 2px;
+  gap: 30px;
+}
+#logo img{
+  height: 23px;
+  width: 108px;
+  display: flex;
+  flex-basis: 30%;
+}
+
+#options{
+  display: flex;
+  flex-basis: 70%;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  
+}
+#options a{
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+
+}
+
+#options a:hover{
+  color: #0070f3;
+  border-bottom: 2px solid #0070f3;
+  padding-bottom: 2px;
+
+}
+
+#user_details{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  align-items:center;
+}
+
