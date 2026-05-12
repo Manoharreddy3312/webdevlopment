@@ -1,4 +1,4 @@
-import Child from "./Child"
+// import Child from "./Child"
 // import React from "react"
 
 // let emp = {
@@ -10,45 +10,63 @@ import Child from "./Child"
 // }
 
 
-let student = {
-  studentDetails:[{
-    name: "Vamshi Krishna Java developer",
+// let student = {
+//   studentDetails:[{
+//     name: "Vamshi Krishna Java developer",
   
-    skill:["JavaScript","React","Node.js","Express.js"],
-    rating:{
-        comm: "1",
-    }
-},{
-    name: "Rajesh Kumar Python Developer",
+//     skill:["JavaScript","React","Node.js","Express.js"],
+//     rating:{
+//         comm: "1",
+//     }
+// },{
+//     name: "Rajesh Kumar Python Developer",
 
-    skill: ["Python", "Django", "Machine Learning", "Data Science"],
-      rating:{
-        comm: "2",
-    }
+//     skill: ["Python", "Django", "Machine Learning", "Data Science"],
+//       rating:{
+//         comm: "2",
+//     }
 
-},
-{
-    name: "Sai Cloud Engineer",
+// },
+// {
+//     name: "Sai Cloud Engineer",
 
-    skill: ["AWS", "DEVOPS", "JUNKINS", "DOCKER"],
-      rating:{
-        comm: "3",
-    }
-}
-]
-}
+//     skill: ["AWS", "DEVOPS", "JUNKINS", "DOCKER"],
+//       rating:{
+//         comm: "3",
+//     }
+// }
+// ]
+// }
+
+// const Parent = () => {
+//   return (
+//     <div>
+//       {/* <h1>Parent Component</h1> */}
+//         {/* <Child data = "Hello from Parent!" value = "React" />   */}
+//          {/* <Child emp = {emp} />   */}
+//         <Child stu = {student} />
+//     </div>
+//   )
+// }
+
+// export default Parent;
+
+
+
+import Child from "./Child"
+import data from "./data.json"
+
+
 
 const Parent = () => {
+  console.log(data);
   return (
     <div>
-      {/* <h1>Parent Component</h1> */}
-        {/* <Child data = "Hello from Parent!" value = "React" />   */}
-         {/* <Child emp = {emp} />   */}
-        <Child stu = {student} />
+        <Child value={data} />
     </div>
+    
+
   )
 }
 
-export default Parent;
-
-
+export default Parent

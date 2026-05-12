@@ -1,0 +1,133 @@
+/* #container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 30px;
+    background-color: #f4f7f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.item {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.item_title {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin: 15px;
+    font-weight: 600;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.item_img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+}
+
+.des {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.cooking_time {
+    padding: 12px 15px;
+    font-weight: bold;
+    color: #e67e22;
+    background-color: #fffaf0;
+    text-align: right;
+    font-size: 0.85rem;
+    border-top: 1px solid #eee;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d6d8de;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+main {
+    background-color: #1e293b;
+    width: 300px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #334155;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    flex-direction: row;
+  
+}
+
+
+main:hover {
+    border-color: #38bdf8;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+    transform: scale(1.02);
+    flex-direction: column;
+}
+
+.imageContainer {
+    height: 250px; 
+    width: 100%;
+    background-color: #ffffff;
+
+}
+
+img {
+    height: 100%; 
+    width: 100%;
+    object-fit: contain;
+    padding: 20px;
+}
+
+.content-wrapper {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 18px;
+    color: #f8fafc;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: 700;
+    color: #38bdf8; 
+}
