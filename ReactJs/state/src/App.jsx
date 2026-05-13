@@ -1,3 +1,7 @@
+/*
+
+! USESTATE HOOK
+
 import  { useState } from 'react' 
 import Cartpage from './usestate/Cartpage' 
 import Addtocart from './usestate/Addtocart'
@@ -70,3 +74,29 @@ function App() {
 }
 
 export default App
+
+
+*/
+
+import {useState,useEffect} from 'react'
+
+// import FetchData from './useEffect/FetchingData'
+
+import Count from './useEffect/FetchingData'
+
+function App() {
+  return (
+    <div>
+      {/* <FetchData /> */}
+      <Count />
+
+    </div>
+  )
+}
+
+export default App
+
+
+
+
+
