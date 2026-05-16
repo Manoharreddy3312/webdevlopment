@@ -78,23 +78,59 @@ export default App
 
 */
 
-import {useState,useEffect} from 'react'
+// import {useState,useEffect} from 'react'
 
 // import FetchData from './useEffect/FetchingData'
 
-import Count from './useEffect/FetchingData'
+// import Count from './useEffect/FetchingData'
+// import FormFocus from './refference/FormFocus'
+// import './app.css'
+
+
+// function App() {
+//   return (
+//     <div>
+//       {/* <FetchData /> */}
+//       {/* <Count /> */}
+//       {/* <FormFocus /> */}
+//     </div>
+//   )
+// }
+// export default App
+
+// import HomeModule from './modulecss/HomeModule'
+// import AboutModule from './modulecss/AboutModule'
+
+
+// function App() {
+//   return (
+//     <div>
+     
+//       <HomeModule />
+//       <AboutModule />
+   
+//     </div>
+//   )
+// }
+
+// export default App
+
+import StyleComponent from './styleComponents/StyledComponent'
+
+
 
 function App() {
   return (
     <div>
-      {/* <FetchData /> */}
-      <Count />
 
+     <StyleComponent />
+      
     </div>
   )
 }
 
 export default App
+
 
 
 

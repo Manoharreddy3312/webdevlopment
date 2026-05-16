@@ -100,51 +100,49 @@
 
 // create count and init and create 2 buttons count++ and init++ when clicking on count++ button count should increase by 1 and when clicking on init++ button init should increase by 1 and count should be increase display the count and init value in the UI use useState hook to manage the state of count and init and useEffect hook to log the count and init value whenever they change in the console.
 
-import { useState, useEffect } from 'react';
-const Count = () => {
-    const [count, setCount] = useState(0);
-    const [init, setInit] = useState(0);
+// import { useState, useEffect } from 'react';
+// const Count = () => {
+//     const [count, setCount] = useState(0);
+//     const [init, setInit] = useState(0);
 
-    useEffect(() => {
-        if (init == 0) {
-            setCount(count);
-        }else {
-            setCount(count+1);
-        }   
+//     useEffect(() => {
+//         if (init == 0) {
+//             setCount(count);
+//         }else {
+//             setCount(count+1);
+//         }   
+//     }, [init]);
 
-    }, [init]);
-
-
-    return (
-        <div style={{
-            fontWeight: 'bold',
-            fontSize: '30px',
-            color: 'black',
-            marginBottom: '20px',
-            textAlign: 'center',
-            margin: '20px 20px 20px 20px',
-            padding: '10px 10px 10px 10px',
-            borderRadius: '10px',
-            border: '1px solid black',
+//     return (
+//         <div style={{
+//             fontWeight: 'bold',
+//             fontSize: '30px',
+//             color: 'black',
+//             marginBottom: '20px',
+//             textAlign: 'center',
+//             margin: '20px 20px 20px 20px',
+//             padding: '10px 10px 10px 10px',
+//             borderRadius: '10px',
+//             border: '1px solid black',
        
-        }}>
-            <h1>
-                Count and Init</h1>
-            <div>
-                <div>
-                    <h2>Count: {count}</h2>
-                    <button className="card-button" onClick={() => setCount(count + 1)}>Count++</button>
-                </div>
-                <div className="card">
-                    <h2>Init: {init}</h2>
+//         }}>
+//             <h1>
+//                 Count and Init</h1>
+//             <div>
+//                 <div>
+//                     <h2>Count: {count}</h2>
+//                     <button className="card-button" onClick={() => setCount(count + 1)}>Count++</button>
+//                 </div>
+//                 <div className="card">
+//                     <h2>Init: {init}</h2>
 
-                    <button onClick={() => setInit(init + 1)}>Init++</button>
-                </div>
-            </div>
-        </div>
-    );
-}
-export default Count;
+//                     <button onClick={() => setInit(init + 1)}>Init++</button>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// }
+// export default Count;
 
 
  

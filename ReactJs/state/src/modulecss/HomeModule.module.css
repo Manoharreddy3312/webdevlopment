@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#box{
+    width: 100%px;
+    height: 80px;
+    background-color:orange;
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    border-radius: 10px;
+}
+.dropdownContainer{
+   
+    display: inline-block;
+    padding: 20px;
+    flex-wrap: wrap;
+    
+}
+.dropdownContainer a{
+    text-decoration: none;
+    font-size: 20px;
+}

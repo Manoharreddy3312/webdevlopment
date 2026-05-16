@@ -1,0 +1,10 @@
+#box{
+    height: 80px;
+    width: 100%;
+    background-color: red;
+}
+
+.about{
+    text-align: center;
+    margin-top: 12%;
+}

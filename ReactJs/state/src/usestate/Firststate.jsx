@@ -1,148 +1,148 @@
 // import { useState } from "react";
 /*  
-// const Firststate = () => {
-//     const [count, setCount] = useState(0);
-//     function increment(){
-//         setCount(count + 1);
-//     }
-//     function decrement(){
-//         setCount(count - 1);
-//     }
-//     function reset(){
-//         setCount(0);
-//     }
+const Firststate = () => {
+    const [count, setCount] = useState(0);
+    function increment(){
+        setCount(count + 1);
+    }
+    function decrement(){
+        setCount(count - 1);
+    }
+    function reset(){
+        setCount(0);
+    }
 
-//     return (
-//       <div>
-//             <h1>Change User: {user}</h1>
-//             <button onClick={() => setUser('Klassy Rahul')}>
-//                 Click me
-//             </button>
-//         </div>
+    return (
+      <div>
+            <h1>Change User: {user}</h1>
+            <button onClick={() => setUser('Klassy Rahul')}>
+                Click me
+            </button>
+        </div>
 
 
-//         change random colors when we click on the button
-//         <div>
-//             <h1 style={{color: colors}}>Change User: {setColors}</h1>
-//             <button onClick={() => setColors('#' + Math.floor(Math.random()).toString(16).substring(2, 7))}>
-//                 Click me
-//             </button>
-//         </div>
-//         
-//             <div>
-//                 <h1 style={{color:'red'}}>Count: {count}</h1>
-//                 <button style={{color:'green',fontSize:'20px'}} onClick={increment}>
-//                     Increase Count
-//                 </button>
-//                 <button style={{color:'orange', marginLeft:'10px', marginRight:'10px', fontSize:'20px'}} onClick={decrement}>
-//                     Decrease Count
-//                 </button>
-//                 <button style={{color:'blue',fontSize:'20px'}} onClick={reset}>
-//                     Reset Count
-//                 </button>
-//             </div>
+        change random colors when we click on the button
+        <div>
+            <h1 style={{color: colors}}>Change User: {setColors}</h1>
+            <button onClick={() => setColors('#' + Math.floor(Math.random()).toString(16).substring(2, 7))}>
+                Click me
+            </button>
+        </div>
+        
+            <div>
+                <h1 style={{color:'red'}}>Count: {count}</h1>
+                <button style={{color:'green',fontSize:'20px'}} onClick={increment}>
+                    Increase Count
+                </button>
+                <button style={{color:'orange', marginLeft:'10px', marginRight:'10px', fontSize:'20px'}} onClick={decrement}>
+                    Decrease Count
+                </button>
+                <button style={{color:'blue',fontSize:'20px'}} onClick={reset}>
+                    Reset Count
+                </button>
+            </div>
 
       
-//     );
-// };
+    );
+};
 
-// export default Firststate;
+export default Firststate;
 
-// const Firststate = () => {
-    //     const [emp, setEmp] = useState({
-//         name: 'KL Rahul',
-//         salary: 20000,
-//         city: 'Karnataka'
-//     });
-//     return (
-//         <div>
-//             <h1>Name: {emp.name}</h1>
-//             <h2>Salary:&#8377; {emp.salary}</h2>
-//             <h2>City: {emp.city}</h2>
-//             <button style={{marginRight: '10px',color:'green',fontSize:'20px'}} onClick={() => setEmp({...emp, city: 'Mumbai',})}>
-//                 Update city
-//             </button>
-//             <button style={{marginRight: '10px',color:'blue',fontSize:'20px'}} onClick={() => setEmp({...emp, salary: emp.salary + 10000})}>
-//                 Update salary
-//             </button>
-//         </div>
+const Firststate = () => {
+        const [emp, setEmp] = useState({
+        name: 'KL Rahul',
+        salary: 20000,
+        city: 'Karnataka'
+    });
+    return (
+        <div>
+            <h1>Name: {emp.name}</h1>
+            <h2>Salary:&#8377; {emp.salary}</h2>
+            <h2>City: {emp.city}</h2>
+            <button style={{marginRight: '10px',color:'green',fontSize:'20px'}} onClick={() => setEmp({...emp, city: 'Mumbai',})}>
+                Update city
+            </button>
+            <button style={{marginRight: '10px',color:'blue',fontSize:'20px'}} onClick={() => setEmp({...emp, salary: emp.salary + 10000})}>
+                Update salary
+            </button>
+        </div>
 
-//     );
-// };
+    );
+};
 
-// export default Firststate;
+export default Firststate;
 
 
 
-// const Firststate = () => {
-    //     const [ShowPassword, setShowPassword] = useState(false);
+const Firststate = () => {
+        const [ShowPassword, setShowPassword] = useState(false);
     
-//     return (
-    //         <div style={{alignItems:'center', marginTop:'50px', gap:'20px'}}>
-    //           password: <input type={ShowPassword ? 'text' : 'password'} placeholder="Enter password" />
-    //           <button onClick={() => setShowPassword(!ShowPassword)}>
-    //             {ShowPassword ? 'Hide' : 'Show'} Password
-    //           </button>
-    //         </div>
-    
-    
-    //     )
-    // }
-    
-    // export default Firststate;
+    return (
+            <div style={{alignItems:'center', marginTop:'50px', gap:'20px'}}>
+              password: <input type={ShowPassword ? 'text' : 'password'} placeholder="Enter password" />
+              <button onClick={() => setShowPassword(!ShowPassword)}>
+                {ShowPassword ? 'Hide' : 'Show'} Password
+              </button>
+            </div>
     
     
+        )
+    }
+    
+    export default Firststate;
     
     
-    // spinner loading the page for 3 seconds and then show the content
-
-    // const Firststate = () => {
-//     const [loading, setLoading] = useState(true);
-
-//     setTimeout(() => {
-    //         setLoading(false);
-//     }, 3000);
-
-//     if (loading) {
-    //         // return <div style={{alignItems:'center', marginTop:'25%'}}>Loading...</div>;
-    //         return <div style={{alignItems:'center', marginTop:'20%'}}><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Loading..." /></div>;
-    //     }
     
-    //   return (
-        //     <div>
-        //         <h1 style={{alignItems:'center',marginTop:'25%',background:"blue", color:"white", padding:"20px"}}>Welcome to React Library</h1>
+    
+    spinner loading the page for 3 seconds and then show the content
+
+    const Firststate = () => {
+    const [loading, setLoading] = useState(true);
+
+    setTimeout(() => {
+            setLoading(false);
+    }, 3000);
+
+    if (loading) {
+            // return <div style={{alignItems:'center', marginTop:'25%'}}>Loading...</div>;
+            return <div style={{alignItems:'center', marginTop:'20%'}}><img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Loading..." /></div>;
+        }
+    
+      return (
+            <div>
+                <h1 style={{alignItems:'center',marginTop:'25%',background:"blue", color:"white", padding:"20px"}}>Welcome to React Library</h1>
         
-        //     </div>
-        //   )
-        // }
+            </div>
+          )
+        }
         
-        // export default Firststate
-        
-        
+        export default Firststate
         
         
-        // import React from 'react';
+        
+        
+        import React from 'react';
 
-        // const Firststate = () => {
-//     //  button to like and unlike the post
-//     const [liked, setLiked] = React.useState(false);
-//   return (
-//     <div>
-//         <div>
+        const Firststate = () => {
+    //  button to like and unlike the post
+    const [liked, setLiked] = React.useState(false);
+  return (
+    <div>
+        <div>
 
 
-//             <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d" alt="Post Image" style={{width: '30%', height: '30%',marginTop: '15%'}} />
-//         </div>
-//       <button onClick={() => setLiked(!liked)} >
-//         {liked ? 'Unlike' : 'Like'}
-//             <span style={{color: liked ? 'red' : 'gray', marginLeft: '5px', fontSize: '20px'}}>&#10084;</span>
-//       </button>
-//         <p>{liked ? 'You liked this post.' : 'You have not liked this post yet.'}</p>
-//     </div>
-//   )
-// }
+            <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d" alt="Post Image" style={{width: '30%', height: '30%',marginTop: '15%'}} />
+        </div>
+      <button onClick={() => setLiked(!liked)} >
+        {liked ? 'Unlike' : 'Like'}
+            <span style={{color: liked ? 'red' : 'gray', marginLeft: '5px', fontSize: '20px'}}>&#10084;</span>
+      </button>
+        <p>{liked ? 'You liked this post.' : 'You have not liked this post yet.'}</p>
+    </div>
+  )
+}
 
-// export default Firststate
+export default Firststate
 
 */
 
